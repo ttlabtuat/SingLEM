@@ -1,0 +1,12 @@
+numpy==1.26.3
+torch==2.4.1
+torchaudio==2.4.1
+torchinfo==1.8.0
+torchmetrics==1.7.2
+torchsummary==1.5.1
+torchvision==0.19.1
+torchviz==0.0.3
+python==3.12.4
+cuda==12.1
+mne==1.9.0
+scikit-learn==1.5.1
