@@ -106,14 +106,13 @@ The script will automatically handle feature extraction, LOSO splitting, SVM tra
 If you use this work useful, please citing our paper:
 
 ```bibtex
-@article{SingLEM,
-  author    = {Sukhbaatar, Jamiyan and Tanaka, Toshihisa},
-  title     = {SingLEM: Single-Channel Large EEG Model},
-  journal   = {...},
-  year      = {XXXX},
-  volume    = {XX},
-  number    = {XX},
-  pages     = {XXXX-XXXX},
-  doi       = {...}
+@misc{sukhbaatar2025singlemsinglechannellargeeeg,
+      title={SingLEM: Single-Channel Large EEG Model}, 
+      author={Jamiyan Sukhbaatar and Satoshi Imamura and Ibuki Inoue and Shoya Murakami and Kazi Mahmudul Hassan and Seungwoo Han and Ingon Chanpornpakdi and Toshihisa Tanaka},
+      year={2025},
+      eprint={2509.17920},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2509.17920}, 
 }
 ```
