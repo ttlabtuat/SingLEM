@@ -108,7 +108,7 @@ If you use this work useful, please citing our paper:
 ```bibtex
 @misc{SingLEM,
       title={SingLEM: Single-Channel Large EEG Model}, 
-      author={Jamiyan Sukhbaatar and Satoshi Imamura and Ibuki Inoue and Shoya Murakami and Kazi Mahmudul Hassan and Seungwoo Han and Ingon Chanpornpakdi and Toshihisa Tanaka},
+      author={Jamiyan Sukhbaatar, Satoshi Imamura, Ibuki Inoue, Shoya Murakami, Kazi Mahmudul Hassan, Seungwoo Han and Ingon Chanpornpakdi, and Toshihisa Tanaka},
       year={2025},
       eprint={2509.17920},
       archivePrefix={arXiv},
