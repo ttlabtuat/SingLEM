@@ -12,7 +12,8 @@ This repository contains the official PyTorch implementation and pretrained mode
 
 ## Architecture of SingLEM
 <p align="center">
-  <img src="images/SingLEM.png" width="900">
+  <!-- <img src="images/SingLEM.png" width="900"> -->
+  <img src="images/Graphical_Abstract_SingLEM.png" width="900">
 </p>
 
 ## Installation
