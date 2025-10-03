@@ -10,7 +10,7 @@ This repository contains the official PyTorch implementation and pretrained mode
 ## Abstract
 > Current deep learning models for electroencephalography (EEG) are often task-specific and depend on large labeled datasets, limiting their adaptability. Although emerging foundation models aim for broader applicability, their rigid dependence on fixed, high-density multi-channel montages restricts their use across heterogeneous datasets and in missing-channel or practical low-channel settings. To address these limitations, we introduce SingLEM, a self-supervised foundation model that learns robust, general-purpose representations from single-channel EEG, making it inherently hardware agnostic. The model employs a hybrid encoder architecture that combines convolutional layers to extract local features with a hierarchical transformer to model both short- and long-range temporal dependencies. SingLEM is pretrained on 71 public datasets comprising over 9,200 subjects and 357,000 single-channel hours of EEG. When evaluated as a fixed feature extractor across six motor imagery and cognitive tasks, aggregated single-channel representations consistently outperformed leading multi-channel foundation models and handcrafted baselines. These results demonstrate that a single-channel approach can achieve state-of-the-art generalization while enabling fine-grained neurophysiological analysis and enhancing interpretability. The source code and pretrained models are available at.
 
-## Architecture of SingLEM
+## Architecture and Application SingLEM
 <p align="center">
   <!-- <img src="images/SingLEM.png" width="900"> -->
   <img src="images/Graphical_Abstract_SingLEM.png" width="900">
