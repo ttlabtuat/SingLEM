@@ -1,4 +1,4 @@
-# SingLEM: A Foundation Model for Single-Channel EEG
+# SingLEM: Single-Channel Large EEG Model
 
 This repository contains the official PyTorch implementation and pretrained model weights for the paper:
 
