@@ -129,6 +129,11 @@ Keep the placeholder paths unchanged. If your file manager creates sibling
 folders such as `BENDR-main copy` or `ATTEN_28 copy`, the scripts will not use
 those folders. Merge downloaded contents into the existing placeholder tree so
 the real files replace zero-byte files at the same relative paths.
+Do not paste full upstream repositories as new sibling folders inside
+`models/foundation/`, such as `models/foundation/BENDR-main/`. The code reads
+the canonical runtime folders such as `models/foundation/bendr/`; full upstream
+repositories should be staged under root-level `foundation_models/` or passed
+explicitly with `--source_root`.
 
 For full upstream repositories, the recommended paste location is a staging
 folder named `foundation_models/` at the repository root:

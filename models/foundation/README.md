@@ -40,6 +40,13 @@ Keep the canonical paths unchanged. If your file manager creates folders such as
 `BENDR-main copy` or `CSBrain-main copy`, `setup_models.py` may not find them.
 Rename or merge downloaded folders so they match the expected names, or pass the
 download location explicitly with `--source_root` and `--checkpoint_root`.
+Do not paste full upstream repositories as sibling folders inside this
+`models/foundation/` directory, such as `models/foundation/BENDR-main/` or
+`models/foundation/BIOT-main/`. The feature extractors read the canonical
+runtime folders such as `models/foundation/bendr/` and
+`models/foundation/biot/`. For full repositories, use the root-level
+`foundation_models/` staging folder described below, or pass the downloaded
+repository path with `--source_root`.
 
 Example for a full upstream repository plus a separate checkpoint download
 folder:
@@ -53,8 +60,9 @@ python models/foundation/setup_models.py \
   --verify
 ```
 
-If the full upstream repository was pasted directly under the corresponding
-model folder, the same command can usually be shortened to:
+If the full upstream repository contents were merged directly into the
+corresponding canonical model folder, for example into
+`models/foundation/biot/`, the same command can usually be shortened to:
 
 ```bash
 python models/foundation/setup_models.py --models biot --install --verify
@@ -84,10 +92,11 @@ SingLEM/
 Do not place SingLEM itself under `foundation_models/`. SingLEM is part of this
 repository and its checkpoints are kept under `SingLEM/checkpoints/`.
 Do not paste full upstream repositories over `models/foundation/<model>/`
-unless you are following that model's README to replace the exact placeholder
-files. The recommended full-repository workflow is to keep full repos under
-root-level `foundation_models/` and let `setup_models.py --install` copy the
-required files into `models/foundation/`.
+unless you are intentionally merging contents into that canonical model folder
+or replacing the exact placeholder files listed in that model's README. The
+recommended full-repository workflow is to keep full repos under root-level
+`foundation_models/` and let `setup_models.py --install` copy the required
+files into `models/foundation/`.
 
 Then run:
 
