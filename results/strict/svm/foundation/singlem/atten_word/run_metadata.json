@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_word",
+  "family": "svm/foundation",
+  "model": "singlem",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/singlem/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 70.25641025641025,
+    "accuracy_std": 8.255534274282079,
+    "f1_macro_mean": 69.67647407382837,
+    "f1_macro_std": 8.703743551800695,
+    "kappa_mean": 0.40512820512820513,
+    "kappa_std": 0.1651106854856416,
+    "n_subjects": 26,
+    "precision_macro_mean": 71.50814934711977,
+    "precision_macro_std": 7.961378353465793,
+    "recall_macro_mean": 70.25641025641025,
+    "recall_macro_std": 8.255534274282079
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_nback",
+  "family": "svm/foundation",
+  "model": "bendr",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/bendr/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 62.74928774928775,
+    "accuracy_std": 5.68556333829627,
+    "f1_macro_mean": 62.18904918524177,
+    "f1_macro_std": 6.16127444090762,
+    "kappa_mean": 0.254985754985755,
+    "kappa_std": 0.11371126676592538,
+    "n_subjects": 26,
+    "precision_macro_mean": 63.317147418276875,
+    "precision_macro_std": 5.565992542826224,
+    "recall_macro_mean": 62.74928774928775,
+    "recall_macro_std": 5.685563338296269
+  }
+}

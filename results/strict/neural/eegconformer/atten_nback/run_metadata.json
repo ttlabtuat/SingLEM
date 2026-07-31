@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_nback",
+  "family": "neural",
+  "model": "eegconformer",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/neural/eegconformer/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 77.7065527065527,
+    "accuracy_std": 10.108882799240018,
+    "f1_macro_mean": 76.25432648261032,
+    "f1_macro_std": 12.455252152882052,
+    "kappa_mean": 0.5541310541310541,
+    "kappa_std": 0.2021776559848004,
+    "n_subjects": 26,
+    "precision_macro_mean": 81.53654904318495,
+    "precision_macro_std": 7.982911556142554,
+    "recall_macro_mean": 77.7065527065527,
+    "recall_macro_std": 10.108882799240018
+  }
+}

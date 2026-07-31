@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/foundation",
+  "model": "luna_large",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/luna_large/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 57.95068027210885,
+    "accuracy_std": 7.469670615624765,
+    "f1_macro_mean": 56.61443951914053,
+    "f1_macro_std": 8.590655940652733,
+    "kappa_mean": 0.15901360544217688,
+    "kappa_std": 0.14939341231249534,
+    "n_subjects": 21,
+    "precision_macro_mean": 58.38021152312025,
+    "precision_macro_std": 7.957610491509628,
+    "recall_macro_mean": 57.95068027210885,
+    "recall_macro_std": 7.469670615624768
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_word",
+  "family": "svm/foundation",
+  "model": "luna_large",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/luna_large/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 58.58974358974359,
+    "accuracy_std": 9.634340289844074,
+    "f1_macro_mean": 54.382099574529896,
+    "f1_macro_std": 12.447147064229409,
+    "kappa_mean": 0.17179487179487177,
+    "kappa_std": 0.19268680579688155,
+    "n_subjects": 26,
+    "precision_macro_mean": 61.15375432762321,
+    "precision_macro_std": 14.766308040492838,
+    "recall_macro_mean": 58.58974358974359,
+    "recall_macro_std": 9.634340289844076
+  }
+}

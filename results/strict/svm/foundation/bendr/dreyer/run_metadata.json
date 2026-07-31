@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/foundation",
+  "model": "bendr",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/bendr/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 52.23214285714286,
+    "accuracy_std": 2.706844829053086,
+    "f1_macro_mean": 51.849731203821335,
+    "f1_macro_std": 2.762214342365218,
+    "kappa_mean": 0.04464285714285714,
+    "kappa_std": 0.05413689658106172,
+    "n_subjects": 21,
+    "precision_macro_mean": 52.32426635732577,
+    "precision_macro_std": 2.777865746628173,
+    "recall_macro_mean": 52.23214285714286,
+    "recall_macro_std": 2.706844829053086
+  }
+}

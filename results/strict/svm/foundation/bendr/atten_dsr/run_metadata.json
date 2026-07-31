@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_dsr",
+  "family": "svm/foundation",
+  "model": "bendr",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/bendr/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 59.61538461538461,
+    "accuracy_std": 7.3589942126259675,
+    "f1_macro_mean": 58.84987768417902,
+    "f1_macro_std": 7.886484362298727,
+    "kappa_mean": 0.19230769230769232,
+    "kappa_std": 0.14717988425251935,
+    "n_subjects": 26,
+    "precision_macro_mean": 60.07406563224678,
+    "precision_macro_std": 7.401346279441509,
+    "recall_macro_mean": 59.61538461538461,
+    "recall_macro_std": 7.3589942126259675
+  }
+}

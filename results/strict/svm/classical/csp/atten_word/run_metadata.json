@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_word",
+  "family": "svm/classical",
+  "model": "csp",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/classical/csp/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 53.525641025641036,
+    "accuracy_std": 10.014732737066517,
+    "f1_macro_mean": 48.46030249824355,
+    "f1_macro_std": 13.091842865428438,
+    "kappa_mean": 0.0705128205128205,
+    "kappa_std": 0.20029465474133035,
+    "n_subjects": 26,
+    "precision_macro_mean": 52.486468942350214,
+    "precision_macro_std": 14.158325007682324,
+    "recall_macro_mean": 53.52564102564102,
+    "recall_macro_std": 10.014732737066515
+  }
+}

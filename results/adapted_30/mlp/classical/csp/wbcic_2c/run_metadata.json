@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_2c",
+  "family": "mlp/classical",
+  "model": "csp",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/classical/csp/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 50.559317252080696,
+    "accuracy_std": 3.8612064427896207,
+    "f1_macro_mean": 42.92718094506008,
+    "f1_macro_std": 7.429282395458721,
+    "kappa_mean": 0.011178330392723501,
+    "kappa_std": 0.07712566826158723,
+    "n_subjects": 51,
+    "precision_macro_mean": 49.18915000218136,
+    "precision_macro_std": 12.063394736951194,
+    "recall_macro_mean": 50.55860025169488,
+    "recall_macro_std": 3.8568972253110436
+  }
+}

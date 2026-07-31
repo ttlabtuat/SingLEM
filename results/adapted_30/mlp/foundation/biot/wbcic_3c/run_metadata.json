@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_3c",
+  "family": "mlp/foundation",
+  "model": "biot",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/biot/wbcic_3c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 36.987302968164215,
+    "accuracy_std": 4.463724745058385,
+    "f1_macro_mean": 34.93366441482,
+    "f1_macro_std": 5.172566363699597,
+    "kappa_mean": 0.054924216446059944,
+    "kappa_std": 0.067060933130447,
+    "n_subjects": 11,
+    "precision_macro_mean": 38.39653727305647,
+    "precision_macro_std": 6.10190687518586,
+    "recall_macro_mean": 36.9954200388983,
+    "recall_macro_std": 4.47116592832681
+  }
+}

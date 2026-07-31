@@ -1,0 +1,21 @@
+{
+  "foundation_models": [
+    "singlem",
+    "bendr",
+    "biot",
+    "cbramod",
+    "labram",
+    "codebrain",
+    "csbrain",
+    "luna_large",
+    "mirepnet"
+  ],
+  "singlem_default_variant": "downstream_excluded",
+  "singlem_ablation_variants": [
+    "downstream_included",
+    "no_feature_embedding"
+  ],
+  "mi_only_models": ["mirepnet"],
+  "neural_models": ["eegnet", "eegconformer", "ifnetv2"],
+  "classical_methods": ["csp", "welch_psd"]
+}

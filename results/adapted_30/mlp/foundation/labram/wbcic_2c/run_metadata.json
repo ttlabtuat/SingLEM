@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_2c",
+  "family": "mlp/foundation",
+  "model": "labram",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/labram/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 52.34024545069826,
+    "accuracy_std": 3.8731318674650064,
+    "f1_macro_mean": 49.63842730911621,
+    "f1_macro_std": 5.6939929040155945,
+    "kappa_mean": 0.046751765837646626,
+    "kappa_std": 0.07769251113292723,
+    "n_subjects": 51,
+    "precision_macro_mean": 52.77977259958732,
+    "precision_macro_std": 5.282310011103816,
+    "recall_macro_mean": 52.338529614744445,
+    "recall_macro_std": 3.886206819539361
+  }
+}

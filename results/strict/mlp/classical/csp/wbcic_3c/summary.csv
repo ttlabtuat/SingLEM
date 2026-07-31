@@ -1,0 +1,2 @@
+n_subjects,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std,precision_macro_mean,precision_macro_std,recall_macro_mean,recall_macro_std,kappa_mean,kappa_std
+11,35.00932400932401,2.5649043035611276,26.065794428403038,7.585400945753956,31.026926712066,12.81325650853839,35.0,2.581988897471611,0.024992850464719794,0.03874303738505116

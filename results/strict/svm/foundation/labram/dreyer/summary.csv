@@ -1,0 +1,2 @@
+n_subjects,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std,precision_macro_mean,precision_macro_std,recall_macro_mean,recall_macro_std,kappa_mean,kappa_std
+21,55.00000000000001,6.5580341947873375,53.65154276031847,6.805482917641564,55.983374300465215,7.49608206399502,55.00000000000001,6.5580341947873375,0.1,0.13116068389574675

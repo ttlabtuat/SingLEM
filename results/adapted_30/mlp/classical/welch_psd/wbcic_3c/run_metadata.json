@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_3c",
+  "family": "mlp/classical",
+  "model": "welch_psd",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/classical/welch_psd/wbcic_3c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 42.53049980322707,
+    "accuracy_std": 7.199105919626553,
+    "f1_macro_mean": 41.76245642255682,
+    "f1_macro_std": 7.177866921064097,
+    "kappa_mean": 0.13784835770873327,
+    "kappa_std": 0.10793842294206057,
+    "n_subjects": 11,
+    "precision_macro_mean": 42.85654600059804,
+    "precision_macro_std": 7.412372070059675,
+    "recall_macro_mean": 42.52086078173035,
+    "recall_macro_std": 7.194869088074681
+  }
+}

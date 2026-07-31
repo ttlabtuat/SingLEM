@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/foundation",
+  "model": "biot",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/biot/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 50.34013605442177,
+    "accuracy_std": 5.810272165193716,
+    "f1_macro_mean": 48.04556509154727,
+    "f1_macro_std": 6.55016373227489,
+    "kappa_mean": 0.006802721088435366,
+    "kappa_std": 0.11620544330387433,
+    "n_subjects": 21,
+    "precision_macro_mean": 50.36111608684236,
+    "precision_macro_std": 7.071901814620227,
+    "recall_macro_mean": 50.34013605442177,
+    "recall_macro_std": 5.810272165193718
+  }
+}

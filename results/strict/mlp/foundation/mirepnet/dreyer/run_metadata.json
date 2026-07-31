@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/foundation",
+  "model": "mirepnet",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/mirepnet/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 73.03571428571429,
+    "accuracy_std": 17.611570364799547,
+    "f1_macro_mean": 72.79781764895971,
+    "f1_macro_std": 17.84579132986288,
+    "kappa_mean": 0.46071428571428574,
+    "kappa_std": 0.352231407295991,
+    "n_subjects": 21,
+    "precision_macro_mean": 73.27181775727716,
+    "precision_macro_std": 17.59208531220841,
+    "recall_macro_mean": 73.03571428571429,
+    "recall_macro_std": 17.611570364799547
+  }
+}

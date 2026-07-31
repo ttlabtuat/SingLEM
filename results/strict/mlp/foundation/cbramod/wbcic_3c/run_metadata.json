@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_3c",
+  "family": "mlp/foundation",
+  "model": "cbramod",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/cbramod/wbcic_3c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 60.80622276274451,
+    "accuracy_std": 10.23785330862724,
+    "f1_macro_mean": 59.86525605091877,
+    "f1_macro_std": 10.412650110677685,
+    "kappa_mean": 0.41206563706563704,
+    "kappa_std": 0.1535686341110913,
+    "n_subjects": 11,
+    "precision_macro_mean": 64.21237414408117,
+    "precision_macro_std": 10.680175120994736,
+    "recall_macro_mean": 60.80563207835935,
+    "recall_macro_std": 10.237870701974805
+  }
+}

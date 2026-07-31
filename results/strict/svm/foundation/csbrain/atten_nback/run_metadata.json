@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_nback",
+  "family": "svm/foundation",
+  "model": "csbrain",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/csbrain/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 78.13390313390313,
+    "accuracy_std": 8.376746682614902,
+    "f1_macro_mean": 77.56455861062796,
+    "f1_macro_std": 8.850069450426792,
+    "kappa_mean": 0.5626780626780626,
+    "kappa_std": 0.16753493365229807,
+    "n_subjects": 26,
+    "precision_macro_mean": 80.44709150100167,
+    "precision_macro_std": 7.710610613625956,
+    "recall_macro_mean": 78.13390313390313,
+    "recall_macro_std": 8.376746682614902
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "raw_datasets_root": "raw_datasets",
+  "trials_root": "datasets/trials",
+  "features_root": "datasets/features",
+  "foundation_models_root": "models/foundation"
+}

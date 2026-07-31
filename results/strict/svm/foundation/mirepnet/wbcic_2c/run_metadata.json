@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_2c",
+  "family": "svm/foundation",
+  "model": "mirepnet",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/mirepnet/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 61.25815351266135,
+    "accuracy_std": 10.86749580398606,
+    "f1_macro_mean": 60.82514733706721,
+    "f1_macro_std": 10.985485158895674,
+    "kappa_mean": 0.2251283814057295,
+    "kappa_std": 0.21735039277936233,
+    "n_subjects": 51,
+    "precision_macro_mean": 61.782585549878924,
+    "precision_macro_std": 11.180157685434141,
+    "recall_macro_mean": 61.25589225589225,
+    "recall_macro_std": 10.867361014595751
+  }
+}

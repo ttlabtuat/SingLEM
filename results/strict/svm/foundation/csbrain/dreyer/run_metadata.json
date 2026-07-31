@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/foundation",
+  "model": "csbrain",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/csbrain/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 68.95833333333333,
+    "accuracy_std": 11.94115345489427,
+    "f1_macro_mean": 68.60919382219039,
+    "f1_macro_std": 12.181996598196378,
+    "kappa_mean": 0.3791666666666667,
+    "kappa_std": 0.2388230690978854,
+    "n_subjects": 21,
+    "precision_macro_mean": 69.56547186056855,
+    "precision_macro_std": 12.165437365930835,
+    "recall_macro_mean": 68.95833333333333,
+    "recall_macro_std": 11.94115345489427
+  }
+}

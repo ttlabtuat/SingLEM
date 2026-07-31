@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_nback",
+  "family": "svm/foundation",
+  "model": "biot",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/biot/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 60.47008547008548,
+    "accuracy_std": 9.780755827239194,
+    "f1_macro_mean": 57.98543039011403,
+    "f1_macro_std": 12.531426089527088,
+    "kappa_mean": 0.2094017094017094,
+    "kappa_std": 0.19561511654478386,
+    "n_subjects": 26,
+    "precision_macro_mean": 61.294580789354924,
+    "precision_macro_std": 12.778002578623662,
+    "recall_macro_mean": 60.470085470085465,
+    "recall_macro_std": 9.780755827239194
+  }
+}

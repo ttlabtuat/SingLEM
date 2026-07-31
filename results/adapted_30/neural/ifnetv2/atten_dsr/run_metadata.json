@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_dsr",
+  "family": "neural",
+  "model": "ifnetv2",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/neural/ifnetv2/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 77.6923076923077,
+    "accuracy_std": 10.456650441778114,
+    "f1_macro_mean": 77.43678368671267,
+    "f1_macro_std": 10.648294563671765,
+    "kappa_mean": 0.5538461538461539,
+    "kappa_std": 0.20913300883556232,
+    "n_subjects": 26,
+    "precision_macro_mean": 78.63270567418692,
+    "precision_macro_std": 10.326006004726139,
+    "recall_macro_mean": 77.6923076923077,
+    "recall_macro_std": 10.456650441778116
+  }
+}

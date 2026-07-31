@@ -1,0 +1,11 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "single_channel/gpu_svm",
+  "model": "singlem",
+  "n_channel_subject_rows": 567,
+  "protocol": "strict",
+  "singlem_variant": "downstream_excluded",
+  "source_metrics": "SingLEM_update/results/single_channel/gpu_svm/singlem/downstream_excluded/dreyer/per_channel_subject_metrics.csv",
+  "source_run": "final_revised_manuscript"
+}

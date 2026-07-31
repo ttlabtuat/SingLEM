@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_word",
+  "family": "mlp/foundation",
+  "model": "bendr",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/bendr/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 51.15384615384616,
+    "accuracy_std": 4.441451984035821,
+    "f1_macro_mean": 42.82240551791935,
+    "f1_macro_std": 8.206710194136585,
+    "kappa_mean": 0.023076923076923057,
+    "kappa_std": 0.08882903968071641,
+    "n_subjects": 26,
+    "precision_macro_mean": 44.13867801377459,
+    "precision_macro_std": 14.786302895999565,
+    "recall_macro_mean": 51.15384615384616,
+    "recall_macro_std": 4.441451984035821
+  }
+}

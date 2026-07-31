@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/foundation",
+  "model": "labram",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/labram/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 54.672619047619044,
+    "accuracy_std": 5.689282164528232,
+    "f1_macro_mean": 52.22116117700493,
+    "f1_macro_std": 6.716546669898584,
+    "kappa_mean": 0.09345238095238095,
+    "kappa_std": 0.11378564329056463,
+    "n_subjects": 21,
+    "precision_macro_mean": 55.88804942121626,
+    "precision_macro_std": 7.391580131009512,
+    "recall_macro_mean": 54.672619047619044,
+    "recall_macro_std": 5.689282164528233
+  }
+}

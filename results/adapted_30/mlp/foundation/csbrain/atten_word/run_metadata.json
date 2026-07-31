@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_word",
+  "family": "mlp/foundation",
+  "model": "csbrain",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/csbrain/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 69.41391941391942,
+    "accuracy_std": 8.40290166091702,
+    "f1_macro_mean": 68.82851636260399,
+    "f1_macro_std": 9.186421862933756,
+    "kappa_mean": 0.3882783882783883,
+    "kappa_std": 0.16805803321834042,
+    "n_subjects": 26,
+    "precision_macro_mean": 70.21461549573054,
+    "precision_macro_std": 8.663996402272417,
+    "recall_macro_mean": 69.41391941391942,
+    "recall_macro_std": 8.40290166091702
+  }
+}

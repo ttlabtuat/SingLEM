@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_2c",
+  "family": "svm/foundation",
+  "model": "singlem",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/singlem/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 79.68415607449009,
+    "accuracy_std": 13.418964789368518,
+    "f1_macro_mean": 79.60010835734664,
+    "f1_macro_std": 13.493346388078638,
+    "kappa_mean": 0.5936819416951398,
+    "kappa_std": 0.2683783622303938,
+    "n_subjects": 51,
+    "precision_macro_mean": 80.0008361468025,
+    "precision_macro_std": 13.437224083485685,
+    "recall_macro_mean": 79.68389780154487,
+    "recall_macro_std": 13.418758415631093
+  }
+}

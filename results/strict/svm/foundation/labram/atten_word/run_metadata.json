@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_word",
+  "family": "svm/foundation",
+  "model": "labram",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/labram/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 61.53846153846154,
+    "accuracy_std": 8.868459429324387,
+    "f1_macro_mean": 57.4459284353239,
+    "f1_macro_std": 12.822038163393449,
+    "kappa_mean": 0.23076923076923078,
+    "kappa_std": 0.17736918858648779,
+    "n_subjects": 26,
+    "precision_macro_mean": 64.73310114547711,
+    "precision_macro_std": 14.664066623137344,
+    "recall_macro_mean": 61.53846153846154,
+    "recall_macro_std": 8.868459429324387
+  }
+}

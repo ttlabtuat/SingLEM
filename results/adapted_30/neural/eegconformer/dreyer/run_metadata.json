@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "neural",
+  "model": "eegconformer",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/neural/eegconformer/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 70.53571428571429,
+    "accuracy_std": 10.073866219691668,
+    "f1_macro_mean": 68.90716501838531,
+    "f1_macro_std": 12.063131211101433,
+    "kappa_mean": 0.4107142857142857,
+    "kappa_std": 0.20147732439383334,
+    "n_subjects": 21,
+    "precision_macro_mean": 73.96602715838742,
+    "precision_macro_std": 8.711444844406028,
+    "recall_macro_mean": 70.53571428571429,
+    "recall_macro_std": 10.073866219691666
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "gpu_svm/singlem_ablation",
+  "model": "singlem",
+  "protocol": "strict",
+  "singlem_variant": "no_feature_embedding",
+  "source_metrics": "SingLEM_update/results/ablation/gpu_svm/singlem/no_feature_embedding/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 71.93452380952381,
+    "accuracy_std": 8.514474720257544,
+    "f1_macro_mean": 71.76161977945014,
+    "f1_macro_std": 8.589719202546979,
+    "kappa_mean": 0.4386904761904762,
+    "kappa_std": 0.17028949440515087,
+    "n_subjects": 21,
+    "precision_macro_mean": 72.39307408142909,
+    "precision_macro_std": 8.469052807892108,
+    "recall_macro_mean": 71.93452380952381,
+    "recall_macro_std": 8.514474720257542
+  }
+}

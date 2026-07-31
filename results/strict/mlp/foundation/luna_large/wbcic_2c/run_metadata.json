@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_2c",
+  "family": "mlp/foundation",
+  "model": "luna_large",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/luna_large/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 59.56049857128781,
+    "accuracy_std": 8.21270177551569,
+    "f1_macro_mean": 58.71693576350639,
+    "f1_macro_std": 8.535314265550948,
+    "kappa_mean": 0.1911389576390296,
+    "kappa_std": 0.16428302126244626,
+    "n_subjects": 51,
+    "precision_macro_mean": 60.564596063098065,
+    "precision_macro_std": 8.678403035663566,
+    "recall_macro_mean": 59.55644682115271,
+    "recall_macro_std": 8.214325912377596
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_nback",
+  "family": "mlp/foundation",
+  "model": "cbramod",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/cbramod/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 75.85470085470085,
+    "accuracy_std": 11.076870317485412,
+    "f1_macro_mean": 74.28808355963832,
+    "f1_macro_std": 13.524903227006266,
+    "kappa_mean": 0.5170940170940171,
+    "kappa_std": 0.22153740634970823,
+    "n_subjects": 26,
+    "precision_macro_mean": 78.74188123853999,
+    "precision_macro_std": 11.771402827718388,
+    "recall_macro_mean": 75.85470085470085,
+    "recall_macro_std": 11.076870317485414
+  }
+}

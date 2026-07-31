@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_2c",
+  "family": "svm/foundation",
+  "model": "cbramod",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/cbramod/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 78.1435116760272,
+    "accuracy_std": 11.138930740775411,
+    "f1_macro_mean": 77.90436434239871,
+    "f1_macro_std": 11.429993526475679,
+    "kappa_mean": 0.5628590236612455,
+    "kappa_std": 0.22277614316426672,
+    "n_subjects": 51,
+    "precision_macro_mean": 78.84938828263543,
+    "precision_macro_std": 11.014069127526609,
+    "recall_macro_mean": 78.1421073479897,
+    "recall_macro_std": 11.138635605968194
+  }
+}

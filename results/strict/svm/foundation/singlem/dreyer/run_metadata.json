@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/foundation",
+  "model": "singlem",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/singlem/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 74.58333333333333,
+    "accuracy_std": 8.149801889207696,
+    "f1_macro_mean": 74.44814741096303,
+    "f1_macro_std": 8.243968456348272,
+    "kappa_mean": 0.49166666666666664,
+    "kappa_std": 0.16299603778415392,
+    "n_subjects": 21,
+    "precision_macro_mean": 74.9757465828369,
+    "precision_macro_std": 8.040871978611944,
+    "recall_macro_mean": 74.58333333333333,
+    "recall_macro_std": 8.149801889207694
+  }
+}

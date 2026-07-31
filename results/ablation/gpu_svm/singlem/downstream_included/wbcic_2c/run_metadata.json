@@ -1,0 +1,23 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_2c",
+  "family": "gpu_svm/singlem_ablation",
+  "model": "singlem",
+  "protocol": "strict",
+  "singlem_variant": "downstream_included",
+  "source_metrics": "SingLEM_update/results/ablation/gpu_svm/singlem/downstream_included/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 79.47812592373631,
+    "accuracy_std": 13.301809585639058,
+    "f1_macro_mean": 79.38532222569647,
+    "f1_macro_std": 13.377410160170037,
+    "kappa_mean": 0.5895609753725404,
+    "kappa_std": 0.26603508095489703,
+    "n_subjects": 51,
+    "precision_macro_mean": 79.82836354541851,
+    "precision_macro_std": 13.300526264401613,
+    "recall_macro_mean": 79.4778173895821,
+    "recall_macro_std": 13.301586251069637
+  }
+}

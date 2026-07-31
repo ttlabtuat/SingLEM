@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_word",
+  "family": "svm/foundation",
+  "model": "codebrain",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/codebrain/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 66.34615384615384,
+    "accuracy_std": 9.649631320179264,
+    "f1_macro_mean": 63.59999483490204,
+    "f1_macro_std": 13.01008166752171,
+    "kappa_mean": 0.3269230769230769,
+    "kappa_std": 0.1929926264035853,
+    "n_subjects": 26,
+    "precision_macro_mean": 69.25607660593369,
+    "precision_macro_std": 12.359213018747468,
+    "recall_macro_mean": 66.34615384615384,
+    "recall_macro_std": 9.649631320179266
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/classical",
+  "model": "csp",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/classical/csp/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 62.55952380952381,
+    "accuracy_std": 14.272603730991229,
+    "f1_macro_mean": 58.57805321053148,
+    "f1_macro_std": 17.712725435633107,
+    "kappa_mean": 0.2511904761904762,
+    "kappa_std": 0.2854520746198246,
+    "n_subjects": 21,
+    "precision_macro_mean": 63.50534958186051,
+    "precision_macro_std": 18.193019823606164,
+    "recall_macro_mean": 62.55952380952381,
+    "recall_macro_std": 14.272603730991232
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_dsr",
+  "family": "mlp/foundation",
+  "model": "singlem",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/singlem/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 83.86752136752136,
+    "accuracy_std": 9.230225134328489,
+    "f1_macro_mean": 83.55875787901532,
+    "f1_macro_std": 9.801196339299036,
+    "kappa_mean": 0.6773504273504274,
+    "kappa_std": 0.18460450268656978,
+    "n_subjects": 26,
+    "precision_macro_mean": 84.92934007919666,
+    "precision_macro_std": 8.386252138407395,
+    "recall_macro_mean": 83.86752136752136,
+    "recall_macro_std": 9.230225134328487
+  }
+}

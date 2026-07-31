@@ -1,0 +1,23 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_nback",
+  "family": "gpu_svm/singlem_ablation",
+  "model": "singlem",
+  "protocol": "strict",
+  "singlem_variant": "no_feature_embedding",
+  "source_metrics": "SingLEM_update/results/ablation/gpu_svm/singlem/no_feature_embedding/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 83.65384615384616,
+    "accuracy_std": 9.70038926888619,
+    "f1_macro_mean": 83.04830540876105,
+    "f1_macro_std": 11.663236538602325,
+    "kappa_mean": 0.6730769230769231,
+    "kappa_std": 0.19400778537772378,
+    "n_subjects": 26,
+    "precision_macro_mean": 84.25802596847629,
+    "precision_macro_std": 9.417473838112935,
+    "recall_macro_mean": 83.65384615384616,
+    "recall_macro_std": 9.70038926888619
+  }
+}

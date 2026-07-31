@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/foundation",
+  "model": "cbramod",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/cbramod/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 71.16071428571429,
+    "accuracy_std": 8.885745506950201,
+    "f1_macro_mean": 70.68271194884923,
+    "f1_macro_std": 9.443848373972692,
+    "kappa_mean": 0.42321428571428565,
+    "kappa_std": 0.17771491013900403,
+    "n_subjects": 21,
+    "precision_macro_mean": 71.9845461755248,
+    "precision_macro_std": 8.819736226828498,
+    "recall_macro_mean": 71.16071428571429,
+    "recall_macro_std": 8.885745506950203
+  }
+}

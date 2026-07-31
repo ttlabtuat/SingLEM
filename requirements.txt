@@ -1,12 +1,10 @@
-numpy==1.26.3
-torch==2.4.1
-torchaudio==2.4.1
-torchinfo==1.8.0
-torchmetrics==1.7.2
-torchsummary==1.5.1
-torchvision==0.19.1
-torchviz==0.0.3
-python==3.12.4
-cuda==12.1
+# Tested PyTorch environment for the revised SingLEM package.
+# RAPIDS/cuML SVM experiments use a separate environment; see RAPIDS.md.
+einops==0.7.0
 mne==1.9.0
-scikit-learn==1.5.1
+numpy==2.4.4
+optuna==4.9.0
+scikit-learn==1.8.0
+scipy==1.16.3
+timm==0.9.16
+torch==2.4.1

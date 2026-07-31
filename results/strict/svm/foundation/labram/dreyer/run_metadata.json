@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/foundation",
+  "model": "labram",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/labram/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 55.00000000000001,
+    "accuracy_std": 6.5580341947873375,
+    "f1_macro_mean": 53.65154276031847,
+    "f1_macro_std": 6.805482917641564,
+    "kappa_mean": 0.1,
+    "kappa_std": 0.13116068389574675,
+    "n_subjects": 21,
+    "precision_macro_mean": 55.983374300465215,
+    "precision_macro_std": 7.49608206399502,
+    "recall_macro_mean": 55.00000000000001,
+    "recall_macro_std": 6.5580341947873375
+  }
+}

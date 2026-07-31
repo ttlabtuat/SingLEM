@@ -1,0 +1,45 @@
+{
+  "seed": 2023,
+  "svm": {
+    "n_trials": 40,
+    "c_values": 20,
+    "c_min_exp": -1,
+    "c_max_exp": 2,
+    "gamma": ["scale", "auto"],
+    "n_jobs": -1
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "batch_size": 128,
+    "weight_decay": 0.00001,
+    "scheduler": "CosineAnnealingLR",
+    "epochs": 100,
+    "patience": 30
+  },
+  "mlp": {
+    "hidden_width": 64,
+    "activation": "ReLU",
+    "dropout": 0.1,
+    "standard_scaler": false
+  },
+  "classical": {
+    "csp_components": 6,
+    "csp_regularization": null,
+    "csp_bandpass": [8.0, 30.0],
+    "welch_band": [4.0, 40.0],
+    "standard_scaler": true
+  },
+  "adaptation": {
+    "fraction": 0.3,
+    "seeds": [2023],
+    "neural_epochs": 20,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.00001
+  },
+  "mlp_adaptation": {
+    "fraction": 0.3,
+    "seeds": [2023],
+    "methods": ["pooled_refit"]
+  }
+}

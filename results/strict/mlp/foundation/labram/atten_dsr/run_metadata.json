@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_dsr",
+  "family": "mlp/foundation",
+  "model": "labram",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/labram/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 60.63034188034189,
+    "accuracy_std": 9.051825302696761,
+    "f1_macro_mean": 56.78782468009365,
+    "f1_macro_std": 13.000608875038392,
+    "kappa_mean": 0.2126068376068376,
+    "kappa_std": 0.18103650605393523,
+    "n_subjects": 26,
+    "precision_macro_mean": 61.13906475223294,
+    "precision_macro_std": 15.072250819186026,
+    "recall_macro_mean": 60.63034188034189,
+    "recall_macro_std": 9.051825302696761
+  }
+}

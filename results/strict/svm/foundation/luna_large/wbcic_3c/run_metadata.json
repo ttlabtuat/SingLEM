@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_3c",
+  "family": "svm/foundation",
+  "model": "luna_large",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/luna_large/wbcic_3c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 45.34650856389986,
+    "accuracy_std": 6.297225543866414,
+    "f1_macro_mean": 43.96311574275661,
+    "f1_macro_std": 6.602471428239644,
+    "kappa_mean": 0.18013334636010997,
+    "kappa_std": 0.09447959956520795,
+    "n_subjects": 11,
+    "precision_macro_mean": 46.31845391153604,
+    "precision_macro_std": 6.991294794183226,
+    "recall_macro_mean": 45.341291704928075,
+    "recall_macro_std": 6.298951576933823
+  }
+}

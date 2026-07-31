@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_dsr",
+  "family": "neural",
+  "model": "eegconformer",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/neural/eegconformer/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 77.61538461538461,
+    "accuracy_std": 9.06896652580402,
+    "f1_macro_mean": 76.55770769332257,
+    "f1_macro_std": 9.847537339963875,
+    "kappa_mean": 0.5523076923076923,
+    "kappa_std": 0.18137933051608043,
+    "n_subjects": 26,
+    "precision_macro_mean": 82.00606538480586,
+    "precision_macro_std": 7.709478642563432,
+    "recall_macro_mean": 77.61538461538461,
+    "recall_macro_std": 9.06896652580402
+  }
+}

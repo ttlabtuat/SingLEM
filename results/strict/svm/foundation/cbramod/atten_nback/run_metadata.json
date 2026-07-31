@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_nback",
+  "family": "svm/foundation",
+  "model": "cbramod",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/cbramod/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 78.02706552706553,
+    "accuracy_std": 9.977882579076807,
+    "f1_macro_mean": 76.62948260862078,
+    "f1_macro_std": 12.400636344275336,
+    "kappa_mean": 0.5605413105413105,
+    "kappa_std": 0.19955765158153618,
+    "n_subjects": 26,
+    "precision_macro_mean": 81.45155657705463,
+    "precision_macro_std": 8.893381767444348,
+    "recall_macro_mean": 78.02706552706553,
+    "recall_macro_std": 9.977882579076807
+  }
+}

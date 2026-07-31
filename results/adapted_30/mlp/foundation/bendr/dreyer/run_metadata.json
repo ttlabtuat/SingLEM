@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/foundation",
+  "model": "bendr",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/bendr/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 50.085034013605444,
+    "accuracy_std": 2.221488176464818,
+    "f1_macro_mean": 35.48053692790535,
+    "f1_macro_std": 5.317707399683099,
+    "kappa_mean": 0.0017006802721088374,
+    "kappa_std": 0.044429763529296375,
+    "n_subjects": 21,
+    "precision_macro_mean": 29.784824173411135,
+    "precision_macro_std": 10.673914950912504,
+    "recall_macro_mean": 50.085034013605444,
+    "recall_macro_std": 2.221488176464818
+  }
+}

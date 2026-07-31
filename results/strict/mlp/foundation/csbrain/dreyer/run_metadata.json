@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/foundation",
+  "model": "csbrain",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/csbrain/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 68.39285714285714,
+    "accuracy_std": 11.156856476112411,
+    "f1_macro_mean": 67.80851954976998,
+    "f1_macro_std": 11.526746294487433,
+    "kappa_mean": 0.3678571428571428,
+    "kappa_std": 0.2231371295222482,
+    "n_subjects": 21,
+    "precision_macro_mean": 69.44233255337906,
+    "precision_macro_std": 11.286716360991878,
+    "recall_macro_mean": 68.39285714285714,
+    "recall_macro_std": 11.156856476112411
+  }
+}

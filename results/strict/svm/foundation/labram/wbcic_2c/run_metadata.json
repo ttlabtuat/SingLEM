@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_2c",
+  "family": "svm/foundation",
+  "model": "labram",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/labram/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 57.23682136171051,
+    "accuracy_std": 5.9684747889697345,
+    "f1_macro_mean": 56.509476478103906,
+    "f1_macro_std": 6.220490773016867,
+    "kappa_mean": 0.14472388229415892,
+    "kappa_std": 0.11936832885235175,
+    "n_subjects": 51,
+    "precision_macro_mean": 57.70413805160805,
+    "precision_macro_std": 6.293792364725849,
+    "recall_macro_mean": 57.23608635373342,
+    "recall_macro_std": 5.968406587976847
+  }
+}

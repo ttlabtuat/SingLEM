@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_2c",
+  "family": "neural",
+  "model": "eegnet",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/neural/eegnet/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 76.24357656731758,
+    "accuracy_std": 12.623878380645529,
+    "f1_macro_mean": 75.57044380247396,
+    "f1_macro_std": 13.290223046008458,
+    "kappa_mean": 0.5248717210248434,
+    "kappa_std": 0.25247813467734304,
+    "n_subjects": 51,
+    "precision_macro_mean": 78.15748287786712,
+    "precision_macro_std": 12.445894934287221,
+    "recall_macro_mean": 76.24385986278568,
+    "recall_macro_std": 12.624321073163689
+  }
+}

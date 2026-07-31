@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/foundation",
+  "model": "luna_large",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/luna_large/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 59.583333333333336,
+    "accuracy_std": 7.0304397681321005,
+    "f1_macro_mean": 59.16342360463558,
+    "f1_macro_std": 7.069134294734393,
+    "kappa_mean": 0.19166666666666668,
+    "kappa_std": 0.14060879536264198,
+    "n_subjects": 21,
+    "precision_macro_mean": 60.09155268725858,
+    "precision_macro_std": 7.433090853387782,
+    "recall_macro_mean": 59.583333333333336,
+    "recall_macro_std": 7.030439768132101
+  }
+}

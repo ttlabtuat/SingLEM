@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_word",
+  "family": "neural",
+  "model": "ifnetv2",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/neural/ifnetv2/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 74.17582417582416,
+    "accuracy_std": 12.736511832024696,
+    "f1_macro_mean": 72.73938958370688,
+    "f1_macro_std": 15.01158922425781,
+    "kappa_mean": 0.4835164835164835,
+    "kappa_std": 0.25473023664049393,
+    "n_subjects": 26,
+    "precision_macro_mean": 77.19586418627145,
+    "precision_macro_std": 10.704793302438498,
+    "recall_macro_mean": 74.17582417582416,
+    "recall_macro_std": 12.736511832024695
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_word",
+  "family": "svm/foundation",
+  "model": "biot",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/biot/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 57.179487179487175,
+    "accuracy_std": 7.856621139300006,
+    "f1_macro_mean": 55.150029458869845,
+    "f1_macro_std": 9.767824707965337,
+    "kappa_mean": 0.14358974358974358,
+    "kappa_std": 0.15713242278600012,
+    "n_subjects": 26,
+    "precision_macro_mean": 56.81467762650565,
+    "precision_macro_std": 11.064804794504306,
+    "recall_macro_mean": 57.179487179487175,
+    "recall_macro_std": 7.856621139300006
+  }
+}

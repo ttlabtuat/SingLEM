@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_dsr",
+  "family": "svm/foundation",
+  "model": "luna_large",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/luna_large/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 70.72649572649573,
+    "accuracy_std": 8.809743806996845,
+    "f1_macro_mean": 69.3885100081817,
+    "f1_macro_std": 9.974685694491296,
+    "kappa_mean": 0.41452991452991456,
+    "kappa_std": 0.17619487613993692,
+    "n_subjects": 26,
+    "precision_macro_mean": 73.68993909484547,
+    "precision_macro_std": 7.964094948885051,
+    "recall_macro_mean": 70.72649572649573,
+    "recall_macro_std": 8.809743806996845
+  }
+}

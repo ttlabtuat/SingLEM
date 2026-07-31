@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_2c",
+  "family": "svm/foundation",
+  "model": "biot",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/biot/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 50.83308700364568,
+    "accuracy_std": 3.528291692210564,
+    "f1_macro_mean": 50.258538203854165,
+    "f1_macro_std": 3.753561048165434,
+    "kappa_mean": 0.016660485614650108,
+    "kappa_std": 0.07057018644410742,
+    "n_subjects": 51,
+    "precision_macro_mean": 50.8685160022409,
+    "precision_macro_std": 3.7840972627252967,
+    "recall_macro_mean": 50.83303624480096,
+    "recall_macro_std": 3.5284977410081875
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "datasets": {
+    "dreyer": {
+      "labels": [0, 1],
+      "sfreq": 128,
+      "task_type": "mi"
+    },
+    "wbcic_2c": {
+      "labels": [0, 1],
+      "sfreq": 128,
+      "task_type": "mi"
+    },
+    "wbcic_3c": {
+      "labels": [0, 1, 2],
+      "sfreq": 128,
+      "task_type": "mi"
+    },
+    "atten_nback": {
+      "labels": [0, 1],
+      "sfreq": 128,
+      "task_type": "cognitive",
+      "trial_duration_sec": 10.0
+    },
+    "atten_dsr": {
+      "labels": [0, 1],
+      "sfreq": 128,
+      "task_type": "cognitive",
+      "trial_duration_sec": 10.0
+    },
+    "atten_word": {
+      "labels": [0, 1],
+      "sfreq": 128,
+      "task_type": "cognitive",
+      "trial_duration_sec": 10.0
+    }
+  }
+}

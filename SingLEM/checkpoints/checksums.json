@@ -1,0 +1,14 @@
+{
+  "singlem_downstream_excluded.pt": {
+    "sha256": "cb4c1b4f4a6fae99a984b883177e09b8c2fe44ed0d4c9a0ded3928dc425584bb",
+    "source": "final_public_encoder/downstream_excluded"
+  },
+  "singlem_downstream_included.pt": {
+    "sha256": "e8649be17699d3d8d21c0a5b78fa166703b42c848e652b63386ba4f777f28651",
+    "source": "final_public_encoder/downstream_included"
+  },
+  "singlem_no_feature_embedding.pt": {
+    "sha256": "5b2de666085bbcc54571308778a1631bda395bf6d7585c834a5bff77c709ecda",
+    "source": "final_public_encoder/no_feature_embedding"
+  }
+}

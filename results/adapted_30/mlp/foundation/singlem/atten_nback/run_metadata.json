@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_nback",
+  "family": "mlp/foundation",
+  "model": "singlem",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/singlem/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 84.41295546558703,
+    "accuracy_std": 7.750366872670251,
+    "f1_macro_mean": 84.22987708018302,
+    "f1_macro_std": 8.077250198400886,
+    "kappa_mean": 0.688259109311741,
+    "kappa_std": 0.15500733745340503,
+    "n_subjects": 26,
+    "precision_macro_mean": 85.21994341700155,
+    "precision_macro_std": 7.189813911455735,
+    "recall_macro_mean": 84.41295546558703,
+    "recall_macro_std": 7.75036687267025
+  }
+}

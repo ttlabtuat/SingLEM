@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "neural",
+  "model": "ifnetv2",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/neural/ifnetv2/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 70.91836734693877,
+    "accuracy_std": 17.829378926800896,
+    "f1_macro_mean": 69.8769927340408,
+    "f1_macro_std": 18.88340229100557,
+    "kappa_mean": 0.41836734693877553,
+    "kappa_std": 0.3565875785360179,
+    "n_subjects": 21,
+    "precision_macro_mean": 72.61858986527172,
+    "precision_macro_std": 17.488524157574158,
+    "recall_macro_mean": 70.91836734693877,
+    "recall_macro_std": 17.829378926800896
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_2c",
+  "family": "svm/foundation",
+  "model": "bendr",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/bendr/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 51.088826485368024,
+    "accuracy_std": 3.7084367221963808,
+    "f1_macro_mean": 50.95533856006856,
+    "f1_macro_std": 3.8065882067964663,
+    "kappa_mean": 0.02178555651560843,
+    "kappa_std": 0.07417699695003445,
+    "n_subjects": 51,
+    "precision_macro_mean": 51.077045039446,
+    "precision_macro_std": 3.770363886538096,
+    "recall_macro_mean": 51.089324618736384,
+    "recall_macro_std": 3.708891124077969
+  }
+}

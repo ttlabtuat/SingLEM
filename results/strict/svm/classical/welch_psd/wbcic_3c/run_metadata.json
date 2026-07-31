@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_3c",
+  "family": "svm/classical",
+  "model": "welch_psd",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/classical/welch_psd/wbcic_3c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 37.64690382081687,
+    "accuracy_std": 5.5063815977302575,
+    "f1_macro_mean": 28.61864368046263,
+    "f1_macro_std": 11.265007658072863,
+    "kappa_mean": 0.06455459113750571,
+    "kappa_std": 0.08268239389073206,
+    "n_subjects": 11,
+    "precision_macro_mean": 37.602869404652765,
+    "precision_macro_std": 15.18950707612951,
+    "recall_macro_mean": 37.63636363636364,
+    "recall_macro_std": 5.512520184804657
+  }
+}

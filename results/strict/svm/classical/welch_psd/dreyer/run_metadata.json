@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/classical",
+  "model": "welch_psd",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/classical/welch_psd/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 55.98214285714286,
+    "accuracy_std": 7.3966087789318316,
+    "f1_macro_mean": 53.52033027289123,
+    "f1_macro_std": 9.646607824853854,
+    "kappa_mean": 0.11964285714285715,
+    "kappa_std": 0.1479321755786366,
+    "n_subjects": 21,
+    "precision_macro_mean": 57.8643545736802,
+    "precision_macro_std": 8.62840762258764,
+    "recall_macro_mean": 55.98214285714286,
+    "recall_macro_std": 7.3966087789318316
+  }
+}

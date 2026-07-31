@@ -16,13 +16,13 @@ class Config:
     filter1_size: int   = 3     # kernel size of the first conv layer
     filter2_size: int   = 61    # kernel size of the second conv layer
     cnn_dropout         = 0.3   # dropout
-    cnn_features: int   = 128  
+    cnn_features: int   = 128
 
     # (3) Token‐embedding hyperparameters
     emb_n_heads: int    = 4
     emb_n_layers: int   = 4
     emb_seq_len: int    = 5    # size of sliding window
-    emb_dim: int        = 32 
+    emb_dim: int        = 32
     emb_d_model: int    = 128
 
     # (4) Final representation dimension
@@ -32,7 +32,6 @@ class Config:
     mask_prob: float    = 0.5
 
 config = Config()
-device = 'cuda' if torch.cuda.is_available() else 'cpu' 
 
 class BandFeat(nn.Module):
     """
@@ -58,7 +57,7 @@ class BandFeat(nn.Module):
         x = x.permute(0,2,1)
         x = self.dropout(x)
         x = self.elu(x)
-        
+
         x = self.conv2(x)
         x = x.permute(0,2,1)
         x = self.LN2(x)
@@ -87,8 +86,8 @@ class SelfAttention(nn.Module):
         x: (batch_size, seq_len, d_model)
         returns: same shape
         """
-        B_s, S_l, d_m = x.size() 
-        qkv = self.concat_attn(x) 
+        B_s, S_l, d_m = x.size()
+        qkv = self.concat_attn(x)
         q, k, v = qkv.split(self.d_model, dim=2)
 
         k = k.view(B_s, S_l, self.n_heads, d_m // self.n_heads).transpose(1, 2)
@@ -96,7 +95,7 @@ class SelfAttention(nn.Module):
         v = v.view(B_s, S_l, self.n_heads, d_m // self.n_heads).transpose(1, 2)
 
         y = F.scaled_dot_product_attention(q, k, v, is_causal=False)
-        y = y.transpose(1, 2).contiguous().view(B_s, S_l, d_m) 
+        y = y.transpose(1, 2).contiguous().view(B_s, S_l, d_m)
         # output projection
         hidden_states = self.concat_proj(y)
         return hidden_states
@@ -114,7 +113,7 @@ class MLP(nn.Module):
         hidden_states = self.W_1(hidden_states)
         hidden_states = self.gelu(hidden_states)
         hidden_states = self.W_2(hidden_states)
-        
+
         return hidden_states
 
 class TransformerLayer(nn.Module):
@@ -126,12 +125,12 @@ class TransformerLayer(nn.Module):
         self.self_att_heads = SelfAttention(config)
         self.ln_2 = nn.LayerNorm(config.d_model)
         self.mlp = MLP(config)
-            
+
     def forward(self, x):
         x = x + self.self_att_heads(self.ln_1(x))
         x = x + self.mlp(self.ln_2(x))
         return x
-    
+
 class TransformerEncoder(nn.Module):
     """ Stacked transformer layers """
     def __init__(self, config):
@@ -148,14 +147,14 @@ class TransformerEncoder(nn.Module):
         input = masked_emb + pos_emb
         hidden_states = self.Transformer_layers(input)
         normalized_hidden_states = self.ln_final(hidden_states)
-        
+
         return normalized_hidden_states
 
 class Embedding(nn.Module):
     """
     Given CNN-features for each overlapping window, append a emb token,
     run a small transformer to learn local context,
-    then project the emb-token output → d_model. 
+    then project the emb-token output → d_model.
     """
     def __init__(self, config):
         super().__init__()
@@ -192,13 +191,13 @@ class Embedding(nn.Module):
         total_len = window_len + 1
         pos_idx = torch.arange(total_len, dtype=torch.long, device=x.device)
         pos_emb = self.pos_embedding(pos_idx)
-        pos_emb = pos_emb.unsqueeze(0).expand(emb_batch, -1, -1) 
-        
+        pos_emb = pos_emb.unsqueeze(0).expand(emb_batch, -1, -1)
+
         x = x + pos_emb
         x = self.Emb_Transformer_layers(x)
         x = x[:, 0, :]  # take emb token
         x = self.proj(self.ln(x))
-        
+
         return x
 
 class MaskedZero(nn.Module):
@@ -212,18 +211,31 @@ class MaskedZero(nn.Module):
         self.d_model = config.d_model
         self.mask_prob = config.mask_prob
 
-    def forward(self, emb, current_seq_len):
+    def forward(self, emb, current_seq_len, mask_indices=None):
         batch_size, seq_len, d_model = emb.shape
-        num_to_mask = int(current_seq_len * self.mask_prob)
-        if num_to_mask == 0:
-            empty = emb.new_empty((batch_size, 0), dtype=torch.long)
-            return emb, empty
-        mask_indices = torch.rand(batch_size, current_seq_len, device=device).argsort(dim=-1)[:, :num_to_mask]
-        # Create a mask tensor
-        mask = torch.zeros(batch_size, current_seq_len, dtype=torch.bool, device=device)
+        if mask_indices is None:
+            num_to_mask = int(current_seq_len * self.mask_prob)
+            if num_to_mask == 0:
+                empty = emb.new_empty((batch_size, 0), dtype=torch.long)
+                return emb, empty
+            mask_indices = torch.rand(
+                batch_size, current_seq_len, device=emb.device
+            ).argsort(dim=-1)[:, :num_to_mask]
+        else:
+            if mask_indices.dtype != torch.long or mask_indices.dim() != 2:
+                raise ValueError(
+                    "mask_indices must be a long tensor of shape [batch, masked]"
+                )
+            if mask_indices.size(0) != batch_size:
+                raise ValueError("mask_indices has the wrong batch size")
+            mask_indices = mask_indices.to(emb.device)
+        # Keep masks on the same device as the input embeddings.
+        mask = torch.zeros(
+            batch_size, current_seq_len, dtype=torch.bool, device=emb.device
+        )
         mask.scatter_(1, mask_indices, True)
-        masked_emb = torch.where(mask.unsqueeze(-1), torch.zeros_like(emb).to(device), emb)
-        
+        masked_emb = torch.where(mask.unsqueeze(-1), torch.zeros_like(emb), emb)
+
         return masked_emb, mask_indices
 
 class SlidingWindow(nn.Module):
@@ -231,7 +243,7 @@ class SlidingWindow(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.window_len = config.emb_seq_len
-    
+
     def forward(self, features, batch_size, current_seq_len):
         """
         features: (batch_size * current_seq_len, feature_dim)
@@ -241,11 +253,11 @@ class SlidingWindow(nn.Module):
         pad_left = total_pad // 2
         pad_right = total_pad - pad_left
         batch_features = features.view(batch_size, current_seq_len, -1)
-        features_padded = nn.functional.pad(batch_features, (0, 0, pad_left, pad_right), mode='replicate') 
-        extended_features = features_padded.unfold(1, self.window_len, 1)  
-        extended_features_permuted = extended_features.permute(0, 1, 3, 2) 
-        S_W_output = extended_features_permuted.contiguous().view(batch_size * current_seq_len, self.window_len, features.size(-1)) 
-        
+        features_padded = nn.functional.pad(batch_features, (0, 0, pad_left, pad_right), mode='replicate')
+        extended_features = features_padded.unfold(1, self.window_len, 1)
+        extended_features_permuted = extended_features.permute(0, 1, 3, 2)
+        S_W_output = extended_features_permuted.contiguous().view(batch_size * current_seq_len, self.window_len, features.size(-1))
+
         return S_W_output
 
 class Sequencing(nn.Module):
@@ -257,7 +269,7 @@ class Sequencing(nn.Module):
         super().__init__()
         self.config = config
         self.d_model = config.d_model
-    
+
     def forward(self, embs, current_seq_len):
         total_tokens = embs.shape[0]
         batch_size = total_tokens // current_seq_len
@@ -277,21 +289,22 @@ class EEGEncoder(nn.Module):
         self.TransformerEncoder = TransformerEncoder(config)
         # final projection from d_model -> rep_dim
         self.DimRedLayer = nn.Linear(config.d_model, config.rep_dim)
-        
+
         # initialize all weights
         self.apply(self._initialize_weights)
-    
+
     def _initialize_weights(self, module):
         if isinstance(module, nn.Linear) or isinstance(module, nn.Conv1d):
             nn.init.xavier_uniform_(module.weight)
             if module.bias is not None:
                 nn.init.zeros_(module.bias)
 
-    def forward(self, x):
+    def forward(self, x, mask_indices=None):
         """
         x: (batch_size, current_seq_len, token_len)
+        mask_indices: optional (batch_size, num_masked) deterministic mask
         returns:
-          - representations: (batch_size * current_seq_len, rep_dim)
+          - representations: (batch_size, current_seq_len, rep_dim)
           - mask_idx: (batch_size, num_masked)
           - current_seq_len: int
         """
@@ -301,10 +314,10 @@ class EEGEncoder(nn.Module):
         features_extended = self.SlidingWindow(features, batch_size, current_seq_len)
         embeddings = self.Embedding(features_extended)
         seq_embs = self.Sequencing(embeddings, current_seq_len)
-        masked, mask_idx = self.Masking(seq_embs, current_seq_len)
+        masked, mask_idx = self.Masking(seq_embs, current_seq_len, mask_indices)
         features = self.TransformerEncoder(masked)
         representations = self.DimRedLayer(features)
-        
+
         return representations, mask_idx, current_seq_len
 
 ##### EDModel (PRE-TRAINING ONLY)
@@ -319,16 +332,17 @@ class EDModel(nn.Module):
         # Decoder: rep_dim -> token_len (reconstruct raw tokens)
         self.decoder = nn.Linear(config.rep_dim, config.token_len)
         self.mask_prob = config.mask_prob
-    
-    def forward(self, tokens):
+
+    def forward(self, tokens, mask_indices=None):
         """
         tokens: (batch_size, seq_len, token_len)
+        mask_indices: optional (batch_size, num_masked) deterministic mask
         returns:
           - reconstructed tokens: (batch_size, seq_len, token_len)
           - mask_idx: (batch_size, num_masked)
           - current_seq_len
         """
-        reps, mask_idx, current_seq_len = self.encoder(tokens)
+        reps, mask_idx, current_seq_len = self.encoder(tokens, mask_indices)
         recons = self.decoder(reps)
-        
+
         return recons, mask_idx, current_seq_len

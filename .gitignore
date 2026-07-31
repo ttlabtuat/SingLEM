@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+
+foundation_models/
+examples/EEG.gdf
+
+configs/paths.local.json
+
+results/_logs/
+results/manifests/
+*.log

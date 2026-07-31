@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/foundation",
+  "model": "mirepnet",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/mirepnet/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 72.67857142857143,
+    "accuracy_std": 17.397178804540204,
+    "f1_macro_mean": 72.49410954619968,
+    "f1_macro_std": 17.564895137170623,
+    "kappa_mean": 0.45357142857142857,
+    "kappa_std": 0.34794357609080406,
+    "n_subjects": 21,
+    "precision_macro_mean": 72.92301021133657,
+    "precision_macro_std": 17.401393393964803,
+    "recall_macro_mean": 72.67857142857143,
+    "recall_macro_std": 17.397178804540204
+  }
+}

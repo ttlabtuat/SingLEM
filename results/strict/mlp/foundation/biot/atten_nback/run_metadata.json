@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_nback",
+  "family": "mlp/foundation",
+  "model": "biot",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/biot/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 58.11965811965811,
+    "accuracy_std": 8.463217000432657,
+    "f1_macro_mean": 53.443068019908665,
+    "f1_macro_std": 13.005908550725303,
+    "kappa_mean": 0.1623931623931624,
+    "kappa_std": 0.16926434000865317,
+    "n_subjects": 26,
+    "precision_macro_mean": 57.02243840471659,
+    "precision_macro_std": 14.30204169682433,
+    "recall_macro_mean": 58.11965811965811,
+    "recall_macro_std": 8.46321700043266
+  }
+}

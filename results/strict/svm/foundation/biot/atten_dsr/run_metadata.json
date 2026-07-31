@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_dsr",
+  "family": "svm/foundation",
+  "model": "biot",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/biot/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 61.69871794871795,
+    "accuracy_std": 9.036731260297898,
+    "f1_macro_mean": 60.06107219175092,
+    "f1_macro_std": 9.808942296606583,
+    "kappa_mean": 0.23397435897435898,
+    "kappa_std": 0.18073462520595793,
+    "n_subjects": 26,
+    "precision_macro_mean": 63.99854975993502,
+    "precision_macro_std": 9.49929739465975,
+    "recall_macro_mean": 61.69871794871795,
+    "recall_macro_std": 9.036731260297897
+  }
+}

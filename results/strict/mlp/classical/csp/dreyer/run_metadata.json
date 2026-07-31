@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/classical",
+  "model": "csp",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/classical/csp/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 64.4940476190476,
+    "accuracy_std": 13.931499615892722,
+    "f1_macro_mean": 61.342025299680415,
+    "f1_macro_std": 16.866933431374758,
+    "kappa_mean": 0.2898809523809524,
+    "kappa_std": 0.2786299923178544,
+    "n_subjects": 21,
+    "precision_macro_mean": 65.30705079052437,
+    "precision_macro_std": 18.017149239143226,
+    "recall_macro_mean": 64.4940476190476,
+    "recall_macro_std": 13.93149961589272
+  }
+}

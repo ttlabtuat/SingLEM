@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_dsr",
+  "family": "mlp/foundation",
+  "model": "biot",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/biot/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 59.61538461538461,
+    "accuracy_std": 10.74830934827212,
+    "f1_macro_mean": 56.088177793839066,
+    "f1_macro_std": 13.264798863308034,
+    "kappa_mean": 0.19230769230769226,
+    "kappa_std": 0.2149661869654424,
+    "n_subjects": 26,
+    "precision_macro_mean": 62.15712169810757,
+    "precision_macro_std": 11.377437812889768,
+    "recall_macro_mean": 59.61538461538461,
+    "recall_macro_std": 10.748309348272121
+  }
+}

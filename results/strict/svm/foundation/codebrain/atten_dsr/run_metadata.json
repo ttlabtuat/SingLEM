@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_dsr",
+  "family": "svm/foundation",
+  "model": "codebrain",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/codebrain/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 81.99786324786325,
+    "accuracy_std": 9.537780376530023,
+    "f1_macro_mean": 81.47102506169264,
+    "f1_macro_std": 10.224117781633444,
+    "kappa_mean": 0.639957264957265,
+    "kappa_std": 0.19075560753060045,
+    "n_subjects": 26,
+    "precision_macro_mean": 84.11592369192402,
+    "precision_macro_std": 7.978459529647748,
+    "recall_macro_mean": 81.99786324786325,
+    "recall_macro_std": 9.537780376530023
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_2c",
+  "family": "svm/foundation",
+  "model": "csbrain",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/csbrain/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 79.29140802049463,
+    "accuracy_std": 12.759612258204466,
+    "f1_macro_mean": 79.19436717842333,
+    "f1_macro_std": 12.85424469658043,
+    "kappa_mean": 0.5858218415080149,
+    "kappa_std": 0.2551920334464592,
+    "n_subjects": 51,
+    "precision_macro_mean": 79.58919242816982,
+    "precision_macro_std": 12.709899274943199,
+    "recall_macro_mean": 79.29055258467022,
+    "recall_macro_std": 12.75942433054703
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_word",
+  "family": "gpu_svm/singlem_ablation",
+  "model": "singlem",
+  "protocol": "strict",
+  "singlem_variant": "downstream_included",
+  "source_metrics": "SingLEM_update/results/ablation/gpu_svm/singlem/downstream_included/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 69.61538461538463,
+    "accuracy_std": 8.683415768101248,
+    "f1_macro_mean": 69.23466711894275,
+    "f1_macro_std": 8.854060167900721,
+    "kappa_mean": 0.3923076923076923,
+    "kappa_std": 0.17366831536202498,
+    "n_subjects": 26,
+    "precision_macro_mean": 70.47285090790396,
+    "precision_macro_std": 8.665167032521568,
+    "recall_macro_mean": 69.61538461538463,
+    "recall_macro_std": 8.683415768101248
+  }
+}

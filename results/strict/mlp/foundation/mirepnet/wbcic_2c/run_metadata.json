@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_2c",
+  "family": "mlp/foundation",
+  "model": "mirepnet",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/mirepnet/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 61.728446152330285,
+    "accuracy_std": 10.874461526803344,
+    "f1_macro_mean": 61.30186742024748,
+    "f1_macro_std": 11.008898976850446,
+    "kappa_mean": 0.2345276410060472,
+    "kappa_std": 0.217502919513942,
+    "n_subjects": 51,
+    "precision_macro_mean": 62.23341101001459,
+    "precision_macro_std": 11.20444149912087,
+    "recall_macro_mean": 61.72588631412162,
+    "recall_macro_std": 10.874905287972702
+  }
+}

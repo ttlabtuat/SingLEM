@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_word",
+  "family": "mlp/classical",
+  "model": "welch_psd",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/classical/welch_psd/atten_word/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 71.42857142857143,
+    "accuracy_std": 9.085135251589957,
+    "f1_macro_mean": 70.70484378641879,
+    "f1_macro_std": 9.858562319460646,
+    "kappa_mean": 0.42857142857142855,
+    "kappa_std": 0.18170270503179917,
+    "n_subjects": 26,
+    "precision_macro_mean": 73.19351709365604,
+    "precision_macro_std": 8.864530111694222,
+    "recall_macro_mean": 71.42857142857142,
+    "recall_macro_std": 9.085135251589959
+  }
+}

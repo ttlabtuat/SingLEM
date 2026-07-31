@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/foundation",
+  "model": "singlem",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/singlem/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 73.93707482993199,
+    "accuracy_std": 8.971410833424121,
+    "f1_macro_mean": 73.8254380326438,
+    "f1_macro_std": 9.057131590478184,
+    "kappa_mean": 0.47874149659863946,
+    "kappa_std": 0.17942821666848244,
+    "n_subjects": 21,
+    "precision_macro_mean": 74.23092003101036,
+    "precision_macro_std": 8.934733830059049,
+    "recall_macro_mean": 73.93707482993197,
+    "recall_macro_std": 8.97141083342412
+  }
+}

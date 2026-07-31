@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "dreyer",
+  "family": "svm/foundation",
+  "model": "biot",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/biot/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 52.827380952380956,
+    "accuracy_std": 6.045462682675251,
+    "f1_macro_mean": 50.850449000783414,
+    "f1_macro_std": 7.720582269283324,
+    "kappa_mean": 0.05654761904761907,
+    "kappa_std": 0.12090925365350502,
+    "n_subjects": 21,
+    "precision_macro_mean": 52.644464592630854,
+    "precision_macro_std": 7.099748999797106,
+    "recall_macro_mean": 52.827380952380956,
+    "recall_macro_std": 6.04546268267525
+  }
+}

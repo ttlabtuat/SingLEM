@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "wbcic_2c",
+  "family": "svm/classical",
+  "model": "csp",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/classical/csp/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 49.70504483200315,
+    "accuracy_std": 3.660941047173924,
+    "f1_macro_mean": 44.97793108577876,
+    "f1_macro_std": 5.541589539930767,
+    "kappa_mean": -0.005806517145648705,
+    "kappa_std": 0.07308857142566942,
+    "n_subjects": 51,
+    "precision_macro_mean": 50.707717345525694,
+    "precision_macro_std": 6.612048292835181,
+    "recall_macro_mean": 49.709249356308185,
+    "recall_macro_std": 3.6553479269972766
+  }
+}

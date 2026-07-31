@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_2c",
+  "family": "mlp/foundation",
+  "model": "bendr",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/bendr/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 50.25290691816296,
+    "accuracy_std": 3.923471593171773,
+    "f1_macro_mean": 48.242919308779534,
+    "f1_macro_std": 5.0539490425691325,
+    "kappa_mean": 0.005000618016038912,
+    "kappa_std": 0.07843128458316734,
+    "n_subjects": 51,
+    "precision_macro_mean": 50.319656947726976,
+    "precision_macro_std": 4.631310716377421,
+    "recall_macro_mean": 50.24986806316729,
+    "recall_macro_std": 3.921455689660971
+  }
+}

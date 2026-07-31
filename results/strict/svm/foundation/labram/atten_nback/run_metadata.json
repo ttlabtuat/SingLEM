@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_nback",
+  "family": "svm/foundation",
+  "model": "labram",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/labram/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 62.25071225071226,
+    "accuracy_std": 8.446993167625731,
+    "f1_macro_mean": 59.676268649155226,
+    "f1_macro_std": 11.476662971582957,
+    "kappa_mean": 0.245014245014245,
+    "kappa_std": 0.16893986335251465,
+    "n_subjects": 26,
+    "precision_macro_mean": 63.63931405700834,
+    "precision_macro_std": 11.071123022580789,
+    "recall_macro_mean": 62.25071225071225,
+    "recall_macro_std": 8.446993167625733
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_2c",
+  "family": "neural",
+  "model": "ifnetv2",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/neural/ifnetv2/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 73.9366440043354,
+    "accuracy_std": 12.221342816991486,
+    "f1_macro_mean": 72.57060711985615,
+    "f1_macro_std": 14.10775227237105,
+    "kappa_mean": 0.47870602825647585,
+    "kappa_std": 0.24442051844441068,
+    "n_subjects": 51,
+    "precision_macro_mean": 75.75014389447747,
+    "precision_macro_std": 13.21592448935563,
+    "recall_macro_mean": 73.93374925727866,
+    "recall_macro_std": 12.22059821613437
+  }
+}

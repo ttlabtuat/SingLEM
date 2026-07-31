@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_dsr",
+  "family": "svm/classical",
+  "model": "welch_psd",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/classical/welch_psd/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 62.286324786324776,
+    "accuracy_std": 9.531399600666123,
+    "f1_macro_mean": 56.89762804680926,
+    "f1_macro_std": 13.786057357592115,
+    "kappa_mean": 0.24572649572649574,
+    "kappa_std": 0.19062799201332248,
+    "n_subjects": 26,
+    "precision_macro_mean": 67.17718002627235,
+    "precision_macro_std": 12.735240135407786,
+    "recall_macro_mean": 62.286324786324776,
+    "recall_macro_std": 9.531399600666123
+  }
+}

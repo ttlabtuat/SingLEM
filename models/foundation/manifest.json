@@ -1,0 +1,246 @@
+{
+  "models": {
+    "bendr": {
+      "repository_url": "https://github.com/SPOClab-ca/BENDR",
+      "source_path": "models/foundation/bendr/dn3_ext.py",
+      "source_distribution": "placeholder",
+      "checkpoint_paths": [
+        "models/foundation/bendr/encoder.pt",
+        "models/foundation/bendr/contextualizer.pt"
+      ],
+      "checkpoint_sha256": [
+        "32c913b1778d8bdf7f08bbe8ef5e6bef2954087b482851816deefc4d0fcf84cb",
+        "b8ee0c8c8403809d65114ae88485cdf841dd1860a88ebebb4cdee2bf26f91526"
+      ],
+      "install": {
+        "source_candidates": {
+          "models/foundation/bendr/dn3_ext.py": [
+            "dn3_ext.py"
+          ]
+        },
+        "checkpoint_candidates": {
+          "models/foundation/bendr/encoder.pt": [
+            "encoder.pt"
+          ],
+          "models/foundation/bendr/contextualizer.pt": [
+            "contextualizer.pt"
+          ]
+        }
+      },
+      "checkpoint_page": "https://github.com/SPOClab-ca/BENDR/releases/tag/v0.1-alpha",
+      "license": "Not stated"
+    },
+    "biot": {
+      "repository_url": "https://github.com/ycq091044/BIOT",
+      "source_path": "models/foundation/biot/biot.py",
+      "source_distribution": "included",
+      "checkpoint_path": "models/foundation/biot/EEG-six-datasets-18-channels.ckpt",
+      "checkpoint_sha256": "78ff15a1782f194286a97b1abe68b2bf100a39803325e2917337d0a77a228542",
+      "install": {
+        "source_candidates": {
+          "models/foundation/biot/biot.py": [
+            "biot.py",
+            "model/biot.py"
+          ]
+        },
+        "checkpoint_candidates": {
+          "models/foundation/biot/EEG-six-datasets-18-channels.ckpt": [
+            "EEG-six-datasets-18-channels.ckpt",
+            "pretrained-models/EEG-six-datasets-18-channels.ckpt"
+          ]
+        }
+      },
+      "checkpoint_page": "https://github.com/ycq091044/BIOT/tree/main/pretrained-models",
+      "license": "MIT"
+    },
+    "cbramod": {
+      "repository_url": "https://github.com/wjq-learning/CBraMod",
+      "source_path": "models/foundation/cbramod/models/cbramod.py",
+      "source_paths": [
+        "models/foundation/cbramod/models/cbramod.py",
+        "models/foundation/cbramod/models/criss_cross_transformer.py"
+      ],
+      "source_distribution": "included",
+      "checkpoint_path": "models/foundation/cbramod/pretrained_weights/pretrained_weights.pth",
+      "checkpoint_sha256": "0792cb808c14e6b7a2bb2ce1dff379bc47bc54c49a779825bdfeb33bf8157178",
+      "install": {
+        "source_candidates": {
+          "models/foundation/cbramod/models/cbramod.py": [
+            "models/cbramod.py"
+          ],
+          "models/foundation/cbramod/models/criss_cross_transformer.py": [
+            "models/criss_cross_transformer.py"
+          ]
+        },
+        "checkpoint_candidates": {
+          "models/foundation/cbramod/pretrained_weights/pretrained_weights.pth": [
+            "pretrained_weights/pretrained_weights.pth",
+            "pretrained_weights.pth"
+          ]
+        }
+      },
+      "checkpoint_page": "https://huggingface.co/weighting666/CBraMod",
+      "license": "MIT"
+    },
+    "labram": {
+      "repository_url": "https://github.com/935963004/LaBraM",
+      "source_path": "models/foundation/labram/modeling_finetune.py",
+      "source_paths": [
+        "models/foundation/labram/modeling_finetune.py",
+        "models/foundation/labram/utils.py"
+      ],
+      "source_distribution": "included",
+      "checkpoint_path": "models/foundation/labram/checkpoints/labram-base.pth",
+      "checkpoint_sha256": "7c50583826afac76c4ab18f43d958df40496c8229accc09ed6a227c9bb57c37c",
+      "install": {
+        "source_candidates": {
+          "models/foundation/labram/modeling_finetune.py": [
+            "modeling_finetune.py"
+          ],
+          "models/foundation/labram/utils.py": [
+            "utils.py"
+          ]
+        },
+        "checkpoint_candidates": {
+          "models/foundation/labram/checkpoints/labram-base.pth": [
+            "checkpoints/labram-base.pth",
+            "labram-base.pth"
+          ]
+        }
+      },
+      "checkpoint_page": "https://github.com/935963004/LaBraM",
+      "license": "MIT"
+    },
+    "codebrain": {
+      "repository_url": "https://github.com/jingyingma01/CodeBrain",
+      "paper_url": "https://arxiv.org/abs/2506.09110",
+      "source_path": "models/foundation/codebrain/Models/SSSM.py",
+      "source_paths": [
+        "models/foundation/codebrain/Models/SGConv.py",
+        "models/foundation/codebrain/Models/SSSM.py"
+      ],
+      "source_distribution": "placeholder",
+      "checkpoint_path": "models/foundation/codebrain/Checkpoints/CodeBrain.pth",
+      "checkpoint_sha256": "d9714b8732c9883a04d022ee66254cd578ae1fa27f5458e6ab7f1aa96e9a7352",
+      "install": {
+        "source_candidates": {
+          "models/foundation/codebrain/Models/SGConv.py": [
+            "Models/SGConv.py"
+          ],
+          "models/foundation/codebrain/Models/SSSM.py": [
+            "Models/SSSM.py"
+          ]
+        },
+        "checkpoint_candidates": {
+          "models/foundation/codebrain/Checkpoints/CodeBrain.pth": [
+            "Checkpoints/CodeBrain.pth",
+            "CodeBrain.pth"
+          ]
+        }
+      },
+      "license": "Not stated"
+    },
+    "csbrain": {
+      "repository_url": "https://github.com/yuchen2199/CSBrain",
+      "source_path": "models/foundation/csbrain/models/CSBrain.py",
+      "source_paths": [
+        "models/foundation/csbrain/models/CSBrain.py",
+        "models/foundation/csbrain/models/CSBrain_transformer.py",
+        "models/foundation/csbrain/models/CSBrain_transformerlayer.py"
+      ],
+      "source_distribution": "placeholder",
+      "checkpoint_path": "models/foundation/csbrain/CSBrain.pth",
+      "checkpoint_sha256": "cfcdf9dcb069905e5e02e92fe3d59bd3574e779bf554cc02cb701994a79e99cc",
+      "install": {
+        "source_candidates": {
+          "models/foundation/csbrain/models/CSBrain.py": [
+            "models/CSBrain.py"
+          ],
+          "models/foundation/csbrain/models/CSBrain_transformer.py": [
+            "models/CSBrain_transformer.py"
+          ],
+          "models/foundation/csbrain/models/CSBrain_transformerlayer.py": [
+            "models/CSBrain_transformerlayer.py"
+          ]
+        },
+        "checkpoint_candidates": {
+          "models/foundation/csbrain/CSBrain.pth": [
+            "CSBrain.pth"
+          ]
+        }
+      },
+      "checkpoint_page": "https://drive.google.com/drive/folders/1-GsVVewRM0B93H08yts5m53yU2whxYvj",
+      "license": "Not stated"
+    },
+    "luna_large": {
+      "repository_url": "https://github.com/pulp-bio/BioFoundation",
+      "source_path": "models/foundation/luna_large/models/LUNA.py",
+      "source_paths": [
+        "models/foundation/luna_large/models/LUNA.py",
+        "models/foundation/luna_large/models/modules/channel_embeddings.py",
+        "models/foundation/luna_large/models/modules/channel_location_embedder.py",
+        "models/foundation/luna_large/models/modules/frequency_embedder.py",
+        "models/foundation/luna_large/models/modules/rope_transformer_encoder_block.py"
+      ],
+      "source_distribution": "included",
+      "checkpoint_path": "models/foundation/luna_large/weights/LUNA_large.safetensors",
+      "checkpoint_sha256": "03e0321a1e1a30dc074f7bfe512a901138200494f7694f31ab633e42b105c0e4",
+      "install": {
+        "source_candidates": {
+          "models/foundation/luna_large/models/LUNA.py": [
+            "models/LUNA.py"
+          ],
+          "models/foundation/luna_large/models/modules/channel_embeddings.py": [
+            "models/modules/channel_embeddings.py"
+          ],
+          "models/foundation/luna_large/models/modules/channel_location_embedder.py": [
+            "models/modules/channel_location_embedder.py"
+          ],
+          "models/foundation/luna_large/models/modules/frequency_embedder.py": [
+            "models/modules/frequency_embedder.py"
+          ],
+          "models/foundation/luna_large/models/modules/rope_transformer_encoder_block.py": [
+            "models/modules/rope_transformer_encoder_block.py"
+          ]
+        },
+        "checkpoint_candidates": {
+          "models/foundation/luna_large/weights/LUNA_large.safetensors": [
+            "weights/LUNA_large.safetensors",
+            "LUNA_large.safetensors"
+          ]
+        }
+      },
+      "checkpoint_page": "https://huggingface.co/PulpBio/LUNA",
+      "license": "Apache-2.0 code; CC BY-ND 4.0 weights"
+    },
+    "mirepnet": {
+      "repository_url": "https://github.com/staraink/MIRepNet",
+      "source_path": "models/foundation/mirepnet/model/mlm.py",
+      "source_paths": [
+        "models/foundation/mirepnet/model/mlm.py",
+        "models/foundation/mirepnet/utils/channel_list.py"
+      ],
+      "source_distribution": "included",
+      "checkpoint_path": "models/foundation/mirepnet/weight/MIRepNet.pth",
+      "checkpoint_sha256": "432288958007e344a5a84a9ffe9d0e5e5c0cb616aef86c85522375a3f4da9aaf",
+      "install": {
+        "source_candidates": {
+          "models/foundation/mirepnet/model/mlm.py": [
+            "model/mlm.py"
+          ],
+          "models/foundation/mirepnet/utils/channel_list.py": [
+            "utils/channel_list.py"
+          ]
+        },
+        "checkpoint_candidates": {
+          "models/foundation/mirepnet/weight/MIRepNet.pth": [
+            "weight/MIRepNet.pth",
+            "MIRepNet.pth"
+          ]
+        }
+      },
+      "checkpoint_page": "https://huggingface.co/starself/MIRepNet",
+      "license": "MIT"
+    }
+  }
+}

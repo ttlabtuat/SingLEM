@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/foundation",
+  "model": "cbramod",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/cbramod/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 71.1734693877551,
+    "accuracy_std": 8.414404602257704,
+    "f1_macro_mean": 70.88507027612565,
+    "f1_macro_std": 8.688590129034832,
+    "kappa_mean": 0.423469387755102,
+    "kappa_std": 0.16828809204515408,
+    "n_subjects": 21,
+    "precision_macro_mean": 71.72159112381532,
+    "precision_macro_std": 8.290756557993216,
+    "recall_macro_mean": 71.1734693877551,
+    "recall_macro_std": 8.414404602257704
+  }
+}

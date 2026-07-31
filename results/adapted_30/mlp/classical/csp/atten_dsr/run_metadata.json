@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_dsr",
+  "family": "mlp/classical",
+  "model": "csp",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/classical/csp/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 58.692307692307686,
+    "accuracy_std": 9.565643651189317,
+    "f1_macro_mean": 50.68339378096414,
+    "f1_macro_std": 15.263764314677482,
+    "kappa_mean": 0.17384615384615382,
+    "kappa_std": 0.1913128730237863,
+    "n_subjects": 26,
+    "precision_macro_mean": 57.84671081053335,
+    "precision_macro_std": 21.78586639511039,
+    "recall_macro_mean": 58.692307692307686,
+    "recall_macro_std": 9.565643651189315
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_dsr",
+  "family": "mlp/foundation",
+  "model": "bendr",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/foundation/bendr/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 54.15384615384615,
+    "accuracy_std": 6.949488082973063,
+    "f1_macro_mean": 49.97285074212308,
+    "f1_macro_std": 8.941021901386074,
+    "kappa_mean": 0.08307692307692308,
+    "kappa_std": 0.13898976165946125,
+    "n_subjects": 26,
+    "precision_macro_mean": 55.85286396462077,
+    "precision_macro_std": 10.255269230441872,
+    "recall_macro_mean": 54.15384615384615,
+    "recall_macro_std": 6.949488082973063
+  }
+}

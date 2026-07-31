@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_2c",
+  "family": "mlp/foundation",
+  "model": "singlem",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/singlem/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 79.83077150458173,
+    "accuracy_std": 13.667822677326935,
+    "f1_macro_mean": 79.73785975794547,
+    "f1_macro_std": 13.760544879865217,
+    "kappa_mean": 0.5966131006858189,
+    "kappa_std": 0.27335521886005987,
+    "n_subjects": 51,
+    "precision_macro_mean": 80.14585840351037,
+    "precision_macro_std": 13.673241115590196,
+    "recall_macro_mean": 79.83036244800951,
+    "recall_macro_std": 13.667605967723862
+  }
+}

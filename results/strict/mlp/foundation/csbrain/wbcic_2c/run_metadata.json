@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_2c",
+  "family": "mlp/foundation",
+  "model": "csbrain",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/csbrain/wbcic_2c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 79.36077446053798,
+    "accuracy_std": 12.808011013687167,
+    "f1_macro_mean": 79.14702223400334,
+    "f1_macro_std": 13.027346319567327,
+    "kappa_mean": 0.5872114661775584,
+    "kappa_std": 0.25615866835848167,
+    "n_subjects": 51,
+    "precision_macro_mean": 79.97096306830532,
+    "precision_macro_std": 12.606407814635512,
+    "recall_macro_mean": 79.36007130124779,
+    "recall_macro_std": 12.807628138374497
+  }
+}

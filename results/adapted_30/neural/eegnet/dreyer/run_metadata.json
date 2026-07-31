@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "neural",
+  "model": "eegnet",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/neural/eegnet/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 72.66156462585033,
+    "accuracy_std": 10.768005916098629,
+    "f1_macro_mean": 72.31637053245483,
+    "f1_macro_std": 11.204205117679821,
+    "kappa_mean": 0.4532312925170068,
+    "kappa_std": 0.21536011832197258,
+    "n_subjects": 21,
+    "precision_macro_mean": 73.18811707965688,
+    "precision_macro_std": 10.54941732496552,
+    "recall_macro_mean": 72.66156462585033,
+    "recall_macro_std": 10.768005916098627
+  }
+}

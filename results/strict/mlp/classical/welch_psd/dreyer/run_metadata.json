@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "dreyer",
+  "family": "mlp/classical",
+  "model": "welch_psd",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/classical/welch_psd/dreyer/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 56.19047619047619,
+    "accuracy_std": 7.52055714438131,
+    "f1_macro_mean": 54.06421426567901,
+    "f1_macro_std": 9.637350027402343,
+    "kappa_mean": 0.12380952380952379,
+    "kappa_std": 0.15041114288762616,
+    "n_subjects": 21,
+    "precision_macro_mean": 55.75094670841965,
+    "precision_macro_std": 10.650804353200382,
+    "recall_macro_mean": 56.19047619047619,
+    "recall_macro_std": 7.520557144381312
+  }
+}

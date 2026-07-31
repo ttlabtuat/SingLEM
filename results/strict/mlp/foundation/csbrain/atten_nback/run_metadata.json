@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_nback",
+  "family": "mlp/foundation",
+  "model": "csbrain",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/csbrain/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 77.56410256410257,
+    "accuracy_std": 8.128375387545583,
+    "f1_macro_mean": 76.91848265171622,
+    "f1_macro_std": 8.64331566283429,
+    "kappa_mean": 0.5512820512820513,
+    "kappa_std": 0.16256750775091167,
+    "n_subjects": 26,
+    "precision_macro_mean": 80.04616749751281,
+    "precision_macro_std": 7.190706922566076,
+    "recall_macro_mean": 77.56410256410257,
+    "recall_macro_std": 8.128375387545583
+  }
+}

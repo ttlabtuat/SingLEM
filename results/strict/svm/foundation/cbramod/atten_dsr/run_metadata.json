@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_dsr",
+  "family": "svm/foundation",
+  "model": "cbramod",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/foundation/cbramod/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 79.38034188034189,
+    "accuracy_std": 9.842057552468228,
+    "f1_macro_mean": 78.5110353111831,
+    "f1_macro_std": 10.943371180419504,
+    "kappa_mean": 0.5876068376068376,
+    "kappa_std": 0.19684115104936456,
+    "n_subjects": 26,
+    "precision_macro_mean": 82.33201554600366,
+    "precision_macro_std": 7.9983582674286335,
+    "recall_macro_mean": 79.38034188034189,
+    "recall_macro_std": 9.842057552468228
+  }
+}

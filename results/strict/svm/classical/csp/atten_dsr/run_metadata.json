@@ -1,0 +1,22 @@
+{
+  "backend": "cuml",
+  "dataset": "atten_dsr",
+  "family": "svm/classical",
+  "model": "csp",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/svm/classical/csp/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 56.41025641025641,
+    "accuracy_std": 8.562379341106457,
+    "f1_macro_mean": 49.06391010578771,
+    "f1_macro_std": 12.586108746800251,
+    "kappa_mean": 0.12820512820512822,
+    "kappa_std": 0.17124758682212915,
+    "n_subjects": 26,
+    "precision_macro_mean": 59.66014363401245,
+    "precision_macro_std": 17.701502922907387,
+    "recall_macro_mean": 56.41025641025641,
+    "recall_macro_std": 8.562379341106457
+  }
+}

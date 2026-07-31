@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_dsr",
+  "family": "mlp/foundation",
+  "model": "cbramod",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/cbramod/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 77.77777777777779,
+    "accuracy_std": 9.844469525927417,
+    "f1_macro_mean": 76.81133051955082,
+    "f1_macro_std": 11.467863518207528,
+    "kappa_mean": 0.5555555555555556,
+    "kappa_std": 0.19688939051854834,
+    "n_subjects": 26,
+    "precision_macro_mean": 80.39679205836912,
+    "precision_macro_std": 8.816677750637968,
+    "recall_macro_mean": 77.77777777777779,
+    "recall_macro_std": 9.844469525927417
+  }
+}

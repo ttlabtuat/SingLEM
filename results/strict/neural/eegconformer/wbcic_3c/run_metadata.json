@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "wbcic_3c",
+  "family": "neural",
+  "model": "eegconformer",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/neural/eegconformer/wbcic_3c/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 51.98591263808655,
+    "accuracy_std": 8.671503547569914,
+    "f1_macro_mean": 49.63508334121844,
+    "f1_macro_std": 9.011880760370303,
+    "kappa_mean": 0.27979861524149396,
+    "kappa_std": 0.13007447848180176,
+    "n_subjects": 11,
+    "precision_macro_mean": 54.41333654167985,
+    "precision_macro_std": 9.975650176627115,
+    "recall_macro_mean": 51.988368533823085,
+    "recall_macro_std": 8.671982699255619
+  }
+}

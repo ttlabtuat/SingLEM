@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_nback",
+  "family": "mlp/foundation",
+  "model": "bendr",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/bendr/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 56.87321937321938,
+    "accuracy_std": 6.069855563797939,
+    "f1_macro_mean": 54.292333739141306,
+    "f1_macro_std": 8.178479317992004,
+    "kappa_mean": 0.13746438746438747,
+    "kappa_std": 0.12139711127595876,
+    "n_subjects": 26,
+    "precision_macro_mean": 57.23383509332083,
+    "precision_macro_std": 10.018607647503833,
+    "recall_macro_mean": 56.87321937321938,
+    "recall_macro_std": 6.069855563797937
+  }
+}

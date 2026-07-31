@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_dsr",
+  "family": "mlp/classical",
+  "model": "welch_psd",
+  "protocol": "adapted_30",
+  "source_metrics": "SingLEM_update/results/adapted_30/mlp/classical/welch_psd/atten_dsr/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 69.76923076923077,
+    "accuracy_std": 9.488130236491033,
+    "f1_macro_mean": 68.70685591898535,
+    "f1_macro_std": 10.240820871350511,
+    "kappa_mean": 0.39538461538461533,
+    "kappa_std": 0.18976260472982065,
+    "n_subjects": 26,
+    "precision_macro_mean": 72.52965977561351,
+    "precision_macro_std": 10.143761905412733,
+    "recall_macro_mean": 69.76923076923077,
+    "recall_macro_std": 9.488130236491035
+  }
+}

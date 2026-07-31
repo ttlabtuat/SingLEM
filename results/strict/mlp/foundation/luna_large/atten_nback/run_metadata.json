@@ -1,0 +1,22 @@
+{
+  "backend": "pytorch",
+  "dataset": "atten_nback",
+  "family": "mlp/foundation",
+  "model": "luna_large",
+  "protocol": "strict",
+  "source_metrics": "SingLEM_update/results/strict/mlp/foundation/luna_large/atten_nback/per_subject_metrics.csv",
+  "source_run": "final_revised_manuscript",
+  "summary": {
+    "accuracy_mean": 63.28347578347577,
+    "accuracy_std": 10.488553783659759,
+    "f1_macro_mean": 59.03208445046532,
+    "f1_macro_std": 14.716202099522368,
+    "kappa_mean": 0.2656695156695157,
+    "kappa_std": 0.20977107567319517,
+    "n_subjects": 26,
+    "precision_macro_mean": 67.36095581135258,
+    "precision_macro_std": 10.5896023801551,
+    "recall_macro_mean": 63.28347578347577,
+    "recall_macro_std": 10.48855378365976
+  }
+}
