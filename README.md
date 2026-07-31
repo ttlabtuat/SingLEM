@@ -125,6 +125,11 @@ the setup:
 python models/foundation/setup_models.py --verify
 ```
 
+Keep the placeholder paths unchanged. If your file manager creates sibling
+folders such as `BENDR-main copy` or `ATTEN_28 copy`, the scripts will not use
+those folders. Merge downloaded contents into the existing placeholder tree so
+the real files replace zero-byte files at the same relative paths.
+
 For full upstream repositories, the recommended paste location is a staging
 folder named `foundation_models/` at the repository root:
 
@@ -161,6 +166,8 @@ The six downstream tasks are derived from three public source datasets:
 The `raw_datasets/` placeholder tree mirrors the exact paths used by the
 preprocessing code. Replace the zero-byte files with the real downloaded files.
 Do not change the directory layout unless you also update the configuration.
+For example, real ATTEN files must end up under `raw_datasets/ATTEN_28/`, not
+under a sibling folder such as `raw_datasets/ATTEN_28 copy/`.
 Dataset article PDFs, supplementary PDFs, notebooks, and one-off conversion
 helper scripts are not required by the public preprocessing pipeline and are not
 included as placeholders.

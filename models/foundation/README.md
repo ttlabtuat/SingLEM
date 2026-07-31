@@ -36,6 +36,11 @@ Two setup styles are supported:
    --install`. The setup script copies only the files needed by SingLEM into the
    canonical paths and ignores extra upstream files.
 
+Keep the canonical paths unchanged. If your file manager creates folders such as
+`BENDR-main copy` or `CSBrain-main copy`, `setup_models.py` may not find them.
+Rename or merge downloaded folders so they match the expected names, or pass the
+download location explicitly with `--source_root` and `--checkpoint_root`.
+
 Example for a full upstream repository plus a separate checkpoint download
 folder:
 
@@ -78,6 +83,11 @@ SingLEM/
 
 Do not place SingLEM itself under `foundation_models/`. SingLEM is part of this
 repository and its checkpoints are kept under `SingLEM/checkpoints/`.
+Do not paste full upstream repositories over `models/foundation/<model>/`
+unless you are following that model's README to replace the exact placeholder
+files. The recommended full-repository workflow is to keep full repos under
+root-level `foundation_models/` and let `setup_models.py --install` copy the
+required files into `models/foundation/`.
 
 Then run:
 

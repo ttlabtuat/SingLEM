@@ -16,6 +16,13 @@ raw_datasets/
     sourcedata/
 ```
 
+Keep these canonical folder names unchanged. Do not paste downloaded datasets
+in a way that creates sibling folders such as `ATTEN_28 copy`,
+`Dreyer_MI_25 copy`, or `WBCIC_MI_23 copy`. Merge the downloaded contents into
+the existing placeholder folders so real files replace the zero-byte files at
+the same relative paths. The preprocessing scripts read only the canonical
+paths shown above.
+
 The six configured tasks are derived from three source datasets:
 
 - ATTEN n-back, DSR, and word-generation tasks: [Scientific Data 2018](https://doi.org/10.1038/sdata.2018.3)
