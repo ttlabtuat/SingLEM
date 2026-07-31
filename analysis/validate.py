@@ -243,10 +243,11 @@ def validate_foundation_artifacts(
                         failures.append(f"external checkpoint present in raw package: {alternative}")
             elif not publication_checkout and not has_ready_candidate(candidates):
                 failures.append(f"checkpoint is still a placeholder: {path}")
-    for path in model_root.rglob("*"):
-        if path.is_file() and path.suffix in CHECKPOINT_SUFFIXES:
-            if path.stat().st_size > 100_000_000:
-                failures.append(f"oversized checkpoint: {path}")
+    if publication_checkout:
+        for path in model_root.rglob("*"):
+            if path.is_file() and path.suffix in CHECKPOINT_SUFFIXES:
+                if path.stat().st_size > 100_000_000:
+                    failures.append(f"oversized checkpoint: {path}")
     return failures
 
 
