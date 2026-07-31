@@ -125,15 +125,19 @@ the setup:
 python models/foundation/setup_models.py --verify
 ```
 
-Keep the placeholder paths unchanged. If your file manager creates sibling
-folders such as `BENDR-main copy` or `ATTEN_28 copy`, the scripts will not use
-those folders. Merge downloaded contents into the existing placeholder tree so
-the real files replace zero-byte files at the same relative paths.
-Do not paste full upstream repositories as new sibling folders inside
-`models/foundation/`, such as `models/foundation/BENDR-main/`. The code reads
-the canonical runtime folders such as `models/foundation/bendr/`; full upstream
-repositories should be staged under root-level `foundation_models/` or passed
-explicitly with `--source_root`.
+Keep the raw-dataset placeholder paths unchanged. If your file manager creates
+sibling folders such as `ATTEN_28 copy`, the preprocessing scripts will not use
+those folders. Merge downloaded raw-dataset contents into the existing
+placeholder tree so the real files replace zero-byte files at the same relative
+paths.
+
+Foundation-model feature extractors always read the canonical runtime folders
+such as `models/foundation/bendr/` and `models/foundation/biot/`. Full upstream
+repositories can be staged separately and normalized with `setup_models.py
+--install`; the setup script copies only the required files into the canonical
+folders. If your file manager creates names such as `BENDR-main copy`, prefer
+renaming them to clean upstream names, or run `setup_models.py --dry_run` before
+installation to confirm which files will be copied.
 
 For full upstream repositories, the recommended paste location is a staging
 folder named `foundation_models/` at the repository root:
@@ -154,6 +158,17 @@ SingLEM/
 
 Do not place SingLEM itself under `foundation_models/`. SingLEM is not treated
 as an external foundation model in this repository.
+
+A second supported location is beside the canonical placeholder folders:
+
+```text
+SingLEM/
+  models/foundation/
+    bendr/             canonical runtime folder with placeholders
+    biot/              canonical runtime folder with placeholders
+    BENDR-main/        full upstream repository
+    BIOT-main/         full upstream repository
+```
 
 After placing full repositories there and downloading any separate checkpoints,
 normalize the required files into `models/foundation/` with:

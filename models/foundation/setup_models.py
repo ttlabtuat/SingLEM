@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+"""Normalize external foundation-model files into SingLEM's runtime layout.
+
+The public package keeps only the minimal files needed by the feature
+extractors under ``models/foundation/<model>/``. Users may either replace those
+exact placeholders or paste full upstream repositories into a staging location.
+This script copies the required source/checkpoint files from those downloaded
+repositories into the canonical runtime paths.
+"""
 from __future__ import annotations
 
 import argparse
@@ -11,6 +19,18 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 MODEL_ROOT = Path(__file__).resolve().parent
 MANIFEST = MODEL_ROOT / "manifest.json"
+STAGING_ROOT = PROJECT_ROOT / "foundation_models"
+
+MODEL_ROOT_HINTS = {
+    "bendr": ["bendr"],
+    "biot": ["biot"],
+    "cbramod": ["cbramod"],
+    "codebrain": ["codebrain"],
+    "csbrain": ["csbrain"],
+    "labram": ["labram"],
+    "luna_large": ["luna", "lunalarge", "biofoundation"],
+    "mirepnet": ["mirepnet"],
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -36,8 +56,9 @@ def parse_args() -> argparse.Namespace:
         default=[],
         help=(
             "Root of a downloaded upstream source repository. Can be supplied "
-            "multiple times. If omitted, the model directory and its immediate "
-            "subdirectories plus repository-root foundation_models/ are searched."
+            "multiple times. If omitted, the canonical model directory, "
+            "repository-root foundation_models/, and pasted sibling folders "
+            "under models/foundation/ are searched."
         ),
     )
     parser.add_argument(
@@ -86,6 +107,56 @@ def unique_paths(paths: list[Path]) -> list[Path]:
         seen.add(key)
         unique.append(path)
     return unique
+
+
+def normalized_name(value: str) -> str:
+    """Return a case-insensitive name suitable for matching repository folders."""
+    return "".join(char for char in value.lower() if char.isalnum())
+
+
+def repository_name(config: dict) -> str | None:
+    """Return the final path component of the configured upstream repository URL."""
+    url = config.get("repository_url")
+    if not url:
+        return None
+    return url.rstrip("/").removesuffix(".git").rsplit("/", 1)[-1]
+
+
+def model_root_hints(model_name: str, config: dict) -> set[str]:
+    """Build normalized folder-name hints for one foundation model.
+
+    These hints let setup accept full upstream folders such as ``BENDR-main``,
+    ``BioFoundation-main``, or ``LUNA-main`` without searching unrelated model
+    repositories first. That matters because some upstream projects contain
+    generic filenames such as ``utils.py``.
+    """
+    raw_hints = {model_name, model_name.replace("_", "")}
+    raw_hints.update(MODEL_ROOT_HINTS.get(model_name, []))
+    repo = repository_name(config)
+    if repo:
+        raw_hints.add(repo)
+    return {normalized_name(value) for value in raw_hints if normalized_name(value)}
+
+
+def is_model_root(path: Path, hints: set[str]) -> bool:
+    """Return whether a downloaded folder name appears to belong to the model."""
+    name = normalized_name(path.name)
+    return any(hint in name or name in hint for hint in hints)
+
+
+def expand_roots(roots: list[Path]) -> list[Path]:
+    """Search each root and its immediate subdirectories.
+
+    Full upstream repositories are commonly extracted as ``BENDR-main`` or
+    ``BIOT-main`` directories. Expanding one level keeps discovery predictable
+    while avoiding a broad recursive scan through unrelated files.
+    """
+    expanded = []
+    for root in roots:
+        expanded.append(root)
+        if root.exists() and root.is_dir():
+            expanded.extend(path for path in sorted(root.iterdir()) if path.is_dir())
+    return unique_paths(expanded)
 
 
 def checkpoint_entries(config: dict) -> list[tuple[Path, str]]:
@@ -142,15 +213,44 @@ def runtime_candidates(config: dict, model_name: str, kind: str, value: str) -> 
     return unique_paths(paths)
 
 
-def root_candidates(model_name: str, roots: list[Path]) -> list[Path]:
-    candidates = [path.expanduser() for path in roots]
+def root_candidates(
+    model_name: str,
+    config: dict,
+    roots: list[Path],
+    *,
+    include_auto_staging: bool,
+    keep_nonmatching_explicit: bool,
+) -> list[Path]:
+    """Return ordered roots to search for one model's required files.
+
+    The canonical ``models/foundation/<model>/`` directory is always first so
+    exact placeholder replacement and direct canonical merges keep working. If
+    users paste full upstream repositories under either root-level
+    ``foundation_models/`` or ``models/foundation/``, model-like folder names are
+    preferred and unrelated sibling repositories are not searched. Explicit
+    roots are kept as a fallback only when the caller asks for that behavior,
+    which is useful for separate checkpoint download folders.
+    """
     model_dir = MODEL_ROOT / model_name
-    candidates.append(model_dir)
-    candidates.append(PROJECT_ROOT / "foundation_models")
-    for root in list(candidates):
-        if root.exists() and root.is_dir():
-            candidates.extend(path for path in sorted(root.iterdir()) if path.is_dir())
-    return unique_paths(candidates)
+    explicit_roots = expand_roots([path.expanduser() for path in roots])
+    auto_roots = []
+    if include_auto_staging:
+        auto_roots = expand_roots([STAGING_ROOT, MODEL_ROOT])
+
+    hints = model_root_hints(model_name, config)
+    matching_explicit = [path for path in explicit_roots if is_model_root(path, hints)]
+    matching_auto = [path for path in auto_roots if is_model_root(path, hints)]
+    matching = unique_paths(matching_explicit + matching_auto)
+
+    if matching:
+        candidates = [model_dir] + matching
+        if keep_nonmatching_explicit:
+            candidates += [path for path in explicit_roots if path not in matching]
+        return unique_paths(candidates)
+
+    # Without a model-like folder, fall back to the caller-provided roots and
+    # then automatic staging locations. This preserves manually named downloads.
+    return unique_paths([model_dir] + explicit_roots + auto_roots)
 
 
 def install_file(
@@ -198,9 +298,28 @@ def install_model(
     overwrite: bool,
     dry_run: bool,
 ) -> None:
-    source_root_candidates = root_candidates(name, source_roots)
-    checkpoint_root_candidates = root_candidates(
-        name, checkpoint_roots + source_roots
+    source_root_candidates = root_candidates(
+        name,
+        config,
+        source_roots,
+        include_auto_staging=True,
+        keep_nonmatching_explicit=False,
+    )
+    checkpoint_root_candidates = unique_paths(
+        root_candidates(
+            name,
+            config,
+            checkpoint_roots,
+            include_auto_staging=False,
+            keep_nonmatching_explicit=True,
+        )
+        + root_candidates(
+            name,
+            config,
+            source_roots,
+            include_auto_staging=True,
+            keep_nonmatching_explicit=False,
+        )
     )
     for value in source_entries(config):
         install_file(

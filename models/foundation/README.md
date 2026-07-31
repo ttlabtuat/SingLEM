@@ -36,17 +36,13 @@ Two setup styles are supported:
    --install`. The setup script copies only the files needed by SingLEM into the
    canonical paths and ignores extra upstream files.
 
-Keep the canonical paths unchanged. If your file manager creates folders such as
-`BENDR-main copy` or `CSBrain-main copy`, `setup_models.py` may not find them.
-Rename or merge downloaded folders so they match the expected names, or pass the
-download location explicitly with `--source_root` and `--checkpoint_root`.
-Do not paste full upstream repositories as sibling folders inside this
-`models/foundation/` directory, such as `models/foundation/BENDR-main/` or
-`models/foundation/BIOT-main/`. The feature extractors read the canonical
-runtime folders such as `models/foundation/bendr/` and
-`models/foundation/biot/`. For full repositories, use the root-level
-`foundation_models/` staging folder described below, or pass the downloaded
-repository path with `--source_root`.
+Keep the canonical runtime paths unchanged. The feature extractors read folders
+such as `models/foundation/bendr/` and `models/foundation/biot/`; they do not
+run directly from full upstream repositories. If your file manager creates
+folders such as `BENDR-main copy` or `CSBrain-main copy`, prefer renaming them
+to clean upstream names, or pass the download location explicitly with
+`--source_root` and `--checkpoint_root`. Run `setup_models.py --dry_run` when
+you want to inspect the exact copies before installing.
 
 Example for a full upstream repository plus a separate checkpoint download
 folder:
@@ -91,12 +87,24 @@ SingLEM/
 
 Do not place SingLEM itself under `foundation_models/`. SingLEM is part of this
 repository and its checkpoints are kept under `SingLEM/checkpoints/`.
+
+Full upstream repositories may also be pasted beside the canonical placeholder
+folders under this directory:
+
+```text
+models/foundation/
+  bendr/          canonical runtime folder with placeholders
+  biot/           canonical runtime folder with placeholders
+  BENDR-main/     full upstream repository
+  BIOT-main/      full upstream repository
+```
+
 Do not paste full upstream repositories over `models/foundation/<model>/`
 unless you are intentionally merging contents into that canonical model folder
 or replacing the exact placeholder files listed in that model's README. The
-recommended full-repository workflow is to keep full repos under root-level
-`foundation_models/` and let `setup_models.py --install` copy the required
-files into `models/foundation/`.
+recommended full-repository workflow is still to keep full repos under
+root-level `foundation_models/`, but `setup_models.py --install` supports both
+staging locations and copies the required files into `models/foundation/`.
 
 Then run:
 
