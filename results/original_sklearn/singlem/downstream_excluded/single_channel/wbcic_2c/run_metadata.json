@@ -1,0 +1,13 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "wbcic_2c",
+  "model": "singlem",
+  "n_rows": 3009,
+  "n_valid_rows": 3009,
+  "protocol": "single_channel_strict_loso",
+  "singlem_variant": "downstream_excluded",
+  "source_pickle": "original/Downstreams/A_RL/SingLEM_exclude_downstreams/Individual_channels/WBCIC_2C_optuna_channel_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/A_RL/SingLEM_exclude_downstreams/Individual_channels/WBCIC_2C_channel_results.txt"
+}

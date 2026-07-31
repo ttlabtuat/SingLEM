@@ -1,0 +1,24 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "dreyer",
+  "model": "singlem",
+  "n_rows": 21,
+  "n_valid_rows": 21,
+  "protocol": "strict_loso",
+  "singlem_variant": "downstream_included",
+  "source_pickle": "original/Downstreams/A_RL/SingLEM_include_downstreams/SVM/DREYER_MI/DREYER_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/A_RL/SingLEM_include_downstreams/SVM/DREYER_MI/DREYER_results.txt",
+  "summary": {
+    "accuracy_mean": 75.32738095238095,
+    "accuracy_std": 8.384409798214726,
+    "f1_macro_mean": 75.20749463942448,
+    "f1_macro_std": 8.446935464624351,
+    "kappa_mean": 0.506547619047619,
+    "kappa_std": 0.16768819596429452,
+    "n_subjects": 21,
+    "precision_macro_mean": 75.72208029998454,
+    "precision_macro_std": 8.306774886460566
+  }
+}

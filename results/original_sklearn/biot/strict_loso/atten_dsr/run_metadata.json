@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_dsr",
+  "model": "biot",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/ATTEN_28/COMP/ATTEN_DSR_10s_BIOT_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/ATTEN_28/COMP/ATTEN_DSR_10s_BIOT_results.txt",
+  "summary": {
+    "accuracy_mean": 60.8440170940171,
+    "accuracy_std": 9.529680969503886,
+    "f1_macro_mean": 57.90472450915849,
+    "f1_macro_std": 11.577247047762416,
+    "kappa_mean": 0.2168803418803419,
+    "kappa_std": 0.19059361939007768,
+    "n_subjects": 26,
+    "precision_macro_mean": 65.07168484455437,
+    "precision_macro_std": 11.170347397509033
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "wbcic_2c",
+  "model": "singlem",
+  "n_rows": 51,
+  "n_valid_rows": 51,
+  "protocol": "strict_loso",
+  "singlem_variant": "downstream_excluded",
+  "source_pickle": "original/Downstreams/A_RL/SingLEM_exclude_downstreams/SVM/WBCIC_MI/WBCIC_2C_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/A_RL/SingLEM_exclude_downstreams/SVM/WBCIC_MI/WBCIC_2C_results.txt",
+  "summary": {
+    "accuracy_mean": 79.54695043846684,
+    "accuracy_std": 13.675208664941508,
+    "f1_macro_mean": 79.45282831641465,
+    "f1_macro_std": 13.76181253894741,
+    "kappa_mean": 0.5909376044892489,
+    "kappa_std": 0.27350345009697696,
+    "n_subjects": 51,
+    "precision_macro_mean": 79.86423229041458,
+    "precision_macro_std": 13.669416391834693
+  }
+}

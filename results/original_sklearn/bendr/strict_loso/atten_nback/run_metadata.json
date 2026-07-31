@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_nback",
+  "model": "bendr",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/ATTEN_28/COMP/ATTEN_nback_10s_BENDR_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/ATTEN_28/COMP/ATTEN_nback_10s_BENDR_results.txt",
+  "summary": {
+    "accuracy_mean": 52.95584045584045,
+    "accuracy_std": 5.765382452569185,
+    "f1_macro_mean": 52.7503931270219,
+    "f1_macro_std": 5.7088476004080855,
+    "kappa_mean": 0.059116809116809124,
+    "kappa_std": 0.11530764905138369,
+    "n_subjects": 26,
+    "precision_macro_mean": 53.05183329423492,
+    "precision_macro_std": 5.839157429308691
+  }
+}

@@ -1,0 +1,11 @@
+	sub-001	acc=0.3400	f1=0.3368	precision=0.3364	kappa=0.0100	inner_f1=0.3550
+	sub-002	acc=0.3767	f1=0.3763	precision=0.3765	kappa=0.0650	inner_f1=0.3604
+	sub-003	acc=0.3700	f1=0.3699	precision=0.3715	kappa=0.0550	inner_f1=0.3917
+	sub-004	acc=0.3333	f1=0.3175	precision=0.3231	kappa=0.0000	inner_f1=0.3486
+	sub-005	acc=0.3633	f1=0.3593	precision=0.3686	kappa=0.0450	inner_f1=0.3786
+	sub-006	acc=0.3900	f1=0.3874	precision=0.3884	kappa=0.0850	inner_f1=0.3541
+	sub-007	acc=0.3667	f1=0.3647	precision=0.3683	kappa=0.0500	inner_f1=0.3669
+	sub-008	acc=0.3567	f1=0.3523	precision=0.3537	kappa=0.0350	inner_f1=0.3814
+	sub-009	acc=0.3467	f1=0.3448	precision=0.3438	kappa=0.0200	inner_f1=0.3764
+	sub-010	acc=0.3579	f1=0.3442	precision=0.3504	kappa=0.0376	inner_f1=0.3770
+	sub-011	acc=0.2800	f1=0.2789	precision=0.2785	kappa=-0.0800	inner_f1=0.3837

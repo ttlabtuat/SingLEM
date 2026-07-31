@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_word",
+  "model": "labram",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/ATTEN_28/COMP/ATTEN_word_v1_LaBraM_BPF01_40_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/ATTEN_28/COMP/ATTEN_word_v1_LaBraM_BPF01_40_results.txt",
+  "summary": {
+    "accuracy_mean": 60.64102564102565,
+    "accuracy_std": 8.98808474170826,
+    "f1_macro_mean": 56.443887831009775,
+    "f1_macro_std": 12.491555739785351,
+    "kappa_mean": 0.2128205128205128,
+    "kappa_std": 0.17976169483416524,
+    "n_subjects": 26,
+    "precision_macro_mean": 64.04581543260826,
+    "precision_macro_std": 14.721869999372489
+  }
+}

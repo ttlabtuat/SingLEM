@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "wbcic_3c",
+  "model": "biot",
+  "n_rows": 11,
+  "n_valid_rows": 11,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/WBCIC_MI_3C_ses1/COMP/SVM/WBCIC_MI_3C_BIOT_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/WBCIC_MI_3C_ses1/COMP/SVM/WBCIC_MI_3C_BIOT_results.txt",
+  "summary": {
+    "accuracy_mean": 37.04053917097395,
+    "accuracy_std": 4.577277599441266,
+    "f1_macro_mean": 33.784736781914916,
+    "f1_macro_std": 5.265496991587868,
+    "kappa_mean": 0.05576588682233103,
+    "kappa_std": 0.06854845733539534,
+    "n_subjects": 11,
+    "precision_macro_mean": 38.525954188384866,
+    "precision_macro_std": 6.2202665982152965
+  }
+}

@@ -1,5 +1,10 @@
 # SingLEM: Single-Channel Large EEG Model
 
+> **Legacy/original branch.** This branch preserves the original public
+> GitHub version and adds archived original sklearn result materials and
+> reproduction scripts. The final revised-manuscript release is prepared on
+> the `main` branch. This branch is not the revised manuscript package.
+
 This repository contains the official PyTorch implementation and pretrained model weights for the paper:
 
 **SingLEM: Single-Channel Large EEG Model**  

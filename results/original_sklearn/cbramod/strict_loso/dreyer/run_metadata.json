@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "dreyer",
+  "model": "cbramod",
+  "n_rows": 21,
+  "n_valid_rows": 21,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/DREYER_B/COMP/DREYER_MI_CBraMod_9ch_BPF01_40_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/DREYER_B/COMP/DREYER_MI_CBraMod_9ch_BPF01_40_results.txt",
+  "summary": {
+    "accuracy_mean": 71.10119047619048,
+    "accuracy_std": 8.3338647789723,
+    "f1_macro_mean": 70.62223214509096,
+    "f1_macro_std": 8.899130569173245,
+    "kappa_mean": 0.4220238095238096,
+    "kappa_std": 0.16667729557944597,
+    "n_subjects": 21,
+    "precision_macro_mean": 71.91668370977686,
+    "precision_macro_std": 8.250386873019556
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_dsr",
+  "model": "cbramod",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/ATTEN_28/COMP/ATTEN_DSR_10s_CBraMod_BPF01_40_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/ATTEN_28/COMP/ATTEN_DSR_10s_CBraMod_BPF01_40_results.txt",
+  "summary": {
+    "accuracy_mean": 79.5940170940171,
+    "accuracy_std": 9.551066939584192,
+    "f1_macro_mean": 78.80701254130904,
+    "f1_macro_std": 10.46932040457201,
+    "kappa_mean": 0.5918803418803419,
+    "kappa_std": 0.19102133879168384,
+    "n_subjects": 26,
+    "precision_macro_mean": 82.34692234693189,
+    "precision_macro_std": 7.972127026739802
+  }
+}

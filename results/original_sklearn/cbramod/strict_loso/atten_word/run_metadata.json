@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_word",
+  "model": "cbramod",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/ATTEN_28/COMP/ATTEN_word_v1_CBraMod_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/ATTEN_28/COMP/ATTEN_word_v1_CBraMod_results.txt",
+  "summary": {
+    "accuracy_mean": 69.35897435897435,
+    "accuracy_std": 8.28288477190415,
+    "f1_macro_mean": 67.92088899262939,
+    "f1_macro_std": 9.526421297317574,
+    "kappa_mean": 0.3871794871794872,
+    "kappa_std": 0.16565769543808304,
+    "n_subjects": 26,
+    "precision_macro_mean": 72.43179867510621,
+    "precision_macro_std": 7.766893119751142
+  }
+}

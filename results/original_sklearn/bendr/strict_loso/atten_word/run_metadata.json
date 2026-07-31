@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_word",
+  "model": "bendr",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/ATTEN_28/COMP/ATTEN_word_v1_BENDR_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/ATTEN_28/COMP/ATTEN_word_v1_BENDR_results.txt",
+  "summary": {
+    "accuracy_mean": 52.243589743589745,
+    "accuracy_std": 5.900570515881177,
+    "f1_macro_mean": 51.94136044322737,
+    "f1_macro_std": 6.027633060365735,
+    "kappa_mean": 0.04487179487179485,
+    "kappa_std": 0.11801141031762354,
+    "n_subjects": 26,
+    "precision_macro_mean": 52.264566074282584,
+    "precision_macro_std": 6.111342001302185
+  }
+}

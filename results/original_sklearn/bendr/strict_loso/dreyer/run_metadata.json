@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "dreyer",
+  "model": "bendr",
+  "n_rows": 21,
+  "n_valid_rows": 21,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/DREYER_B/COMP/DREYER_MI_BENDR_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/DREYER_B/COMP/DREYER_MI_BENDR_results.txt",
+  "summary": {
+    "accuracy_mean": 50.50595238095238,
+    "accuracy_std": 5.035657998109374,
+    "f1_macro_mean": 50.239870938803534,
+    "f1_macro_std": 5.071344719965302,
+    "kappa_mean": 0.010119047619047614,
+    "kappa_std": 0.10071315996218747,
+    "n_subjects": 21,
+    "precision_macro_mean": 50.523593081860675,
+    "precision_macro_std": 5.134682310344821
+  }
+}

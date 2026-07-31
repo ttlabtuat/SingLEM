@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "wbcic_2c",
+  "model": "labram",
+  "n_rows": 51,
+  "n_valid_rows": 51,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/WBCIC_MI_2C_ses1/COMP/SVM/WBCIC_MI_2C_LaBraM_BFP01_40_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/WBCIC_MI_2C_ses1/COMP/SVM/WBCIC_MI_2C_LaBraM_BFP01_40_results.txt",
+  "summary": {
+    "accuracy_mean": 56.88417578086511,
+    "accuracy_std": 6.041715317644919,
+    "f1_macro_mean": 56.14683178008699,
+    "f1_macro_std": 6.182689253904742,
+    "kappa_mean": 0.13761972240640843,
+    "kappa_std": 0.12080917622570915,
+    "n_subjects": 51,
+    "precision_macro_mean": 57.398686992167534,
+    "precision_macro_std": 6.319635679282691
+  }
+}

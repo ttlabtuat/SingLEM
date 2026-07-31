@@ -1,0 +1,13 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_word",
+  "model": "singlem",
+  "n_rows": 728,
+  "n_valid_rows": 728,
+  "protocol": "single_channel_strict_loso",
+  "singlem_variant": "downstream_excluded",
+  "source_pickle": "original/Downstreams/A_RL/SingLEM_exclude_downstreams/Individual_channels/ATTEN_word_v1_optuna_channel_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/A_RL/SingLEM_exclude_downstreams/Individual_channels/ATTEN_word_v1_channel_results.txt"
+}

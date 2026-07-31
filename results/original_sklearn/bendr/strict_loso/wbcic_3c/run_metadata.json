@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "wbcic_3c",
+  "model": "bendr",
+  "n_rows": 11,
+  "n_valid_rows": 11,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/WBCIC_MI_3C_ses1/COMP/SVM/WBCIC_MI_3C_BENDR_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/WBCIC_MI_3C_ses1/COMP/SVM/WBCIC_MI_3C_BENDR_results.txt",
+  "summary": {
+    "accuracy_mean": 35.28357150096281,
+    "accuracy_std": 2.7754308697291385,
+    "f1_macro_mean": 34.83604055154932,
+    "f1_macro_std": 2.878376998685627,
+    "kappa_mean": 0.02932305891533359,
+    "kappa_std": 0.041644618617308796,
+    "n_subjects": 11,
+    "precision_macro_mean": 35.083356109275016,
+    "precision_macro_std": 2.922039983460204
+  }
+}

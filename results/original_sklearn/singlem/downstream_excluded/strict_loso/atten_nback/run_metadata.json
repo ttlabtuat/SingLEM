@@ -1,0 +1,24 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_nback",
+  "model": "singlem",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "singlem_variant": "downstream_excluded",
+  "source_pickle": "original/Downstreams/A_RL/SingLEM_exclude_downstreams/SVM/ATTEN_28/ATTEN_nback_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/A_RL/SingLEM_exclude_downstreams/SVM/ATTEN_28/ATTEN_nback_results.txt",
+  "summary": {
+    "accuracy_mean": 82.33618233618233,
+    "accuracy_std": 9.731284193905983,
+    "f1_macro_mean": 81.64940456142033,
+    "f1_macro_std": 11.902928103293327,
+    "kappa_mean": 0.6467236467236468,
+    "kappa_std": 0.19462568387811968,
+    "n_subjects": 26,
+    "precision_macro_mean": 82.4893774045605,
+    "precision_macro_std": 11.350781637672895
+  }
+}

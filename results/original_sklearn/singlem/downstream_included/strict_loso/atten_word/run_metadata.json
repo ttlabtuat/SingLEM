@@ -1,0 +1,24 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_word",
+  "model": "singlem",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "singlem_variant": "downstream_included",
+  "source_pickle": "original/Downstreams/A_RL/SingLEM_include_downstreams/SVM/ATTEN_28/ATTEN_word_v1_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/A_RL/SingLEM_include_downstreams/SVM/ATTEN_28/ATTEN_word_v1_results.txt",
+  "summary": {
+    "accuracy_mean": 69.67948717948718,
+    "accuracy_std": 7.206052044066948,
+    "f1_macro_mean": 69.4327042755259,
+    "f1_macro_std": 7.3743056743638045,
+    "kappa_mean": 0.39358974358974363,
+    "kappa_std": 0.14412104088133898,
+    "n_subjects": 26,
+    "precision_macro_mean": 70.17129004989461,
+    "precision_macro_std": 7.077085459974451
+  }
+}

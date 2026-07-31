@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_dsr",
+  "model": "labram",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/ATTEN_28/COMP/ATTEN_DSR_10s_LaBraM_BPF01_40_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/ATTEN_28/COMP/ATTEN_DSR_10s_LaBraM_BPF01_40_results.txt",
+  "summary": {
+    "accuracy_mean": 66.82692307692307,
+    "accuracy_std": 12.054790701278588,
+    "f1_macro_mean": 65.59820035952376,
+    "f1_macro_std": 13.211180387982063,
+    "kappa_mean": 0.33653846153846156,
+    "kappa_std": 0.24109581402557176,
+    "n_subjects": 26,
+    "precision_macro_mean": 68.03664827808939,
+    "precision_macro_std": 12.245860846753203
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn",
+  "classifier": "rbf_svm",
+  "dataset": "atten_word",
+  "model": "biot",
+  "n_rows": 26,
+  "n_valid_rows": 26,
+  "protocol": "strict_loso",
+  "source_pickle": "original/Downstreams/ATTEN_28/COMP/ATTEN_word_v1_BIOT_optuna_results.pkl",
+  "source_run": "original_submission",
+  "source_text": "original/Downstreams/ATTEN_28/COMP/ATTEN_word_v1_BIOT_results.txt",
+  "summary": {
+    "accuracy_mean": 56.666666666666664,
+    "accuracy_std": 6.132441406718666,
+    "f1_macro_mean": 52.54304483426052,
+    "f1_macro_std": 8.86192819485316,
+    "kappa_mean": 0.1333333333333333,
+    "kappa_std": 0.12264882813437332,
+    "n_subjects": 26,
+    "precision_macro_mean": 58.885279407311295,
+    "precision_macro_std": 11.266369785468571
+  }
+}
