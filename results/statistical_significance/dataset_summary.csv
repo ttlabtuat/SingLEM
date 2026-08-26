@@ -1,0 +1,19 @@
+evaluation_setting,manuscript_table,dataset,published_dataset,task,n_subjects,holm_family_size,n_significant_holm_0_05,n_singlem_higher,n_baseline_higher
+strict_svm,Tables II-III,dreyer,Dreyer-MI-2C,motor_imagery,21,10,8,8,0
+strict_svm,Tables II-III,wbcic_3c,WBCIC-MI-3C,motor_imagery,11,10,10,10,0
+strict_svm,Tables II-III,wbcic_2c,WBCIC-MI-2C,motor_imagery,51,10,9,9,0
+strict_svm,Tables II-III,atten_nback,N-back-2C,cognitive,26,9,9,9,0
+strict_svm,Tables II-III,atten_dsr,DSR-2C,cognitive,26,9,9,9,0
+strict_svm,Tables II-III,atten_word,WG-2C,cognitive,26,9,6,6,0
+strict_mlp_neural,Table IV,dreyer,Dreyer-MI-2C,motor_imagery,21,13,6,6,0
+strict_mlp_neural,Table IV,wbcic_3c,WBCIC-MI-3C,motor_imagery,11,13,10,10,0
+strict_mlp_neural,Table IV,wbcic_2c,WBCIC-MI-2C,motor_imagery,51,13,12,12,0
+strict_mlp_neural,Table IV,atten_nback,N-back-2C,cognitive,26,12,12,12,0
+strict_mlp_neural,Table IV,atten_dsr,DSR-2C,cognitive,26,12,11,11,0
+strict_mlp_neural,Table IV,atten_word,WG-2C,cognitive,26,12,5,5,0
+subject_adapted,Table V,dreyer,Dreyer-MI-2C,motor_imagery,21,13,6,6,0
+subject_adapted,Table V,wbcic_3c,WBCIC-MI-3C,motor_imagery,11,13,9,9,0
+subject_adapted,Table V,wbcic_2c,WBCIC-MI-2C,motor_imagery,51,13,11,11,0
+subject_adapted,Table V,atten_nback,N-back-2C,cognitive,26,12,9,9,0
+subject_adapted,Table V,atten_dsr,DSR-2C,cognitive,26,12,10,10,0
+subject_adapted,Table V,atten_word,WG-2C,cognitive,26,12,6,6,0

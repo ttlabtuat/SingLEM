@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 from pathlib import Path
 
 from result_utils import read_csv
@@ -11,6 +12,7 @@ RESULT_ROOT = PROJECT_ROOT / "results"
 README_PATH = PROJECT_ROOT / "README.md"
 README_START = "<!-- RESULTS_TABLES_START -->"
 README_END = "<!-- RESULTS_TABLES_END -->"
+SIGNIFICANCE_ROOT = RESULT_ROOT / "statistical_significance"
 
 DATASETS = ["dreyer", "wbcic_3c", "wbcic_2c", "atten_nback", "atten_dsr", "atten_word"]
 DISPLAY_DATASETS = {
@@ -68,6 +70,44 @@ def revised_summary(protocol: str, family: str, model: str, dataset: str) -> Pat
     return RESULT_ROOT / protocol / family / model / dataset / "summary.csv"
 
 
+def sha256(path: Path) -> str:
+    """Return a streaming SHA-256 digest for stale-analysis detection."""
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def load_significance() -> set[tuple[str, str, str]]:
+    """Load verified Holm-significant SingLEM-higher comparisons."""
+    inventory_path = SIGNIFICANCE_ROOT / "input_inventory.csv"
+    comparisons_path = SIGNIFICANCE_ROOT / "paired_comparisons.csv"
+    if not inventory_path.is_file() or not comparisons_path.is_file():
+        raise FileNotFoundError(
+            "statistical results are missing; run "
+            "python analysis/statistical_significance.py first"
+        )
+    for row in read_csv(inventory_path):
+        source = RESULT_ROOT / row["input_file"]
+        if not source.is_file() or sha256(source) != row["sha256"]:
+            raise RuntimeError(
+                f"statistical results are stale for {source}; rerun "
+                "python analysis/statistical_significance.py"
+            )
+    comparisons = read_csv(comparisons_path)
+    if len(comparisons) != 207:
+        raise RuntimeError(
+            f"expected 207 statistical comparisons, found {len(comparisons)}"
+        )
+    return {
+        (row["evaluation_setting"], row["dataset"], row["baseline_model"])
+        for row in comparisons
+        if row["significant_holm_0_05"] == "True"
+        and row["direction"] == "singlem_higher"
+    }
+
+
 def collect_gpu_svm() -> list[dict]:
     """Collect strict LOSO SVM summaries from the public GPU/cuML result tree."""
     rows = []
@@ -116,6 +156,8 @@ def result_table(
     rows: list[dict],
     models: list[str],
     datasets: list[str],
+    evaluation_setting: str,
+    significance: set[tuple[str, str, str]],
     rank_models: list[str] | None = None,
 ) -> str:
     lookup = {(row["model"], row["dataset"]): row for row in rows}
@@ -146,6 +188,11 @@ def result_table(
                 digits = 3 if metric == "kappa" else 2
                 text = f"{label} {row[f'{metric}_mean']:.{digits}f}±{row[f'{metric}_std']:.{digits}f}"
                 if (
+                    metric == "accuracy"
+                    and (evaluation_setting, dataset, model) in significance
+                ):
+                    text += "*"
+                if (
                     model in rank_models
                     and abs(row[f"{metric}_mean"] - best[(dataset, metric)]) < 1e-12
                 ):
@@ -170,6 +217,7 @@ def update_readme(sections: list[tuple[str, str]]) -> None:
 
 
 def main() -> None:
+    significance = load_significance()
     gpu_svm = collect_gpu_svm()
     strict_mlp = collect_mlp_neural("strict")
     adapted = collect_mlp_neural("adapted_30")
@@ -185,6 +233,8 @@ def main() -> None:
                 gpu_svm,
                 STRICT_SVM_WITH_ABLATIONS,
                 DATASETS[:3],
+                "strict_svm",
+                significance,
                 rank_models=STRICT_SVM_MODELS,
             ),
         ),
@@ -194,11 +244,31 @@ def main() -> None:
                 gpu_svm,
                 cognitive_with_ablations,
                 DATASETS[3:],
+                "strict_svm",
+                significance,
                 rank_models=cognitive_models,
             ),
         ),
-        ("Strict LOSO MLP and Neural Results", result_table(strict_mlp, MLP_NEURAL_MODELS, DATASETS)),
-        ("30% Subject-Adapted MLP and Neural Results", result_table(adapted, MLP_NEURAL_MODELS, DATASETS)),
+        (
+            "Strict LOSO MLP and Neural Results",
+            result_table(
+                strict_mlp,
+                MLP_NEURAL_MODELS,
+                DATASETS,
+                "strict_mlp_neural",
+                significance,
+            ),
+        ),
+        (
+            "30% Subject-Adapted MLP and Neural Results",
+            result_table(
+                adapted,
+                MLP_NEURAL_MODELS,
+                DATASETS,
+                "subject_adapted",
+                significance,
+            ),
+        ),
     ])
     print(
         f"gpu_svm={len(gpu_svm)} strict_mlp_neural={len(strict_mlp)} "

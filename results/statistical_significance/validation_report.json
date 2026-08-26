@@ -1,0 +1,41 @@
+{
+  "aligned_subject_rows": 5562,
+  "all_adapted_calibration_and_test_trial_ids_identical": true,
+  "all_arrays_built_from_explicitly_sorted_subject_ids": true,
+  "all_published_accuracy_means_reproduced": true,
+  "all_subject_ids_unique_and_expected_counts_met": true,
+  "all_subject_sets_exactly_aligned": true,
+  "comparisons_by_setting": {
+    "strict_mlp_neural": 75,
+    "strict_svm": 57,
+    "subject_adapted": 75
+  },
+  "family_sizes": {
+    "strict_mlp_neural:atten_dsr": 12,
+    "strict_mlp_neural:atten_nback": 12,
+    "strict_mlp_neural:atten_word": 12,
+    "strict_mlp_neural:dreyer": 13,
+    "strict_mlp_neural:wbcic_2c": 13,
+    "strict_mlp_neural:wbcic_3c": 13,
+    "strict_svm:atten_dsr": 9,
+    "strict_svm:atten_nback": 9,
+    "strict_svm:atten_word": 9,
+    "strict_svm:dreyer": 10,
+    "strict_svm:wbcic_2c": 10,
+    "strict_svm:wbcic_3c": 10,
+    "subject_adapted:atten_dsr": 12,
+    "subject_adapted:atten_nback": 12,
+    "subject_adapted:atten_word": 12,
+    "subject_adapted:dreyer": 13,
+    "subject_adapted:wbcic_2c": 13,
+    "subject_adapted:wbcic_3c": 13
+  },
+  "holm_independently_cross_checked": true,
+  "input_file_uses": 225,
+  "manuscript_verification_requested": true,
+  "observation_unit_is_one_held_out_subject_accuracy": true,
+  "paired_comparisons": 207,
+  "status": "passed",
+  "strict_svm_57_comparison_regression_unchanged": true,
+  "strict_svm_regression_sha256": "eb2c179bfc90b96fa685359c6d91ecb743234ecf7a9e1fe3f368bad7c80b8107"
+}

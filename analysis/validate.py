@@ -56,6 +56,27 @@ CHANNEL_COUNTS = {
     "atten_dsr": 728,
     "atten_word": 728,
 }
+STATISTICAL_FILES = {
+    "README.md",
+    "aligned_subject_accuracies.csv",
+    "analysis_config.json",
+    "dataset_summary.csv",
+    "input_inventory.csv",
+    "p_value_report.md",
+    "paired_comparisons.csv",
+    "significant_comparisons.csv",
+    "validation_report.json",
+}
+STATISTICAL_COMPARISON_COUNTS = {
+    "strict_svm": 57,
+    "strict_mlp_neural": 75,
+    "subject_adapted": 75,
+}
+STATISTICAL_SIGNIFICANT_COUNTS = {
+    "strict_svm": 51,
+    "strict_mlp_neural": 56,
+    "subject_adapted": 51,
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -344,6 +365,110 @@ def validate_results(package_root: Path) -> list[str]:
     return failures
 
 
+def validate_statistical_results(
+    package_root: Path, verify_manuscript: bool
+) -> list[str]:
+    """Validate statistical artifacts and optional manuscript regressions."""
+    failures = []
+    result_root = package_root / "results"
+    statistics_root = result_root / "statistical_significance"
+    script = package_root / "analysis" / "statistical_significance.py"
+    if not script.is_file():
+        failures.append(f"missing statistical analysis script: {script}")
+    if not statistics_root.is_dir():
+        return failures + [f"missing statistical result directory: {statistics_root}"]
+
+    present = {path.name for path in statistics_root.iterdir() if path.is_file()}
+    missing = sorted(STATISTICAL_FILES - present)
+    if missing:
+        failures.append(f"missing statistical result files: {missing}")
+        return failures
+    if "README.txt" in present:
+        failures.append("statistical results must use README.md, not README.txt")
+
+    inventory = read_csv(statistics_root / "input_inventory.csv")
+    comparisons = read_csv(statistics_root / "paired_comparisons.csv")
+    significant = read_csv(statistics_root / "significant_comparisons.csv")
+    aligned = read_csv(statistics_root / "aligned_subject_accuracies.csv")
+    summaries = read_csv(statistics_root / "dataset_summary.csv")
+    if len(inventory) != 225:
+        failures.append(f"expected 225 statistical input uses, found {len(inventory)}")
+    if len(comparisons) != 207:
+        failures.append(f"expected 207 statistical comparisons, found {len(comparisons)}")
+    if verify_manuscript and len(significant) != 158:
+        failures.append(f"expected 158 significant comparisons, found {len(significant)}")
+    if len(aligned) != 5562:
+        failures.append(f"expected 5562 aligned subject rows, found {len(aligned)}")
+    if len(summaries) != 18:
+        failures.append(f"expected 18 statistical dataset summaries, found {len(summaries)}")
+
+    comparison_counts = {
+        setting: sum(row.get("evaluation_setting") == setting for row in comparisons)
+        for setting in STATISTICAL_COMPARISON_COUNTS
+    }
+    significant_counts = {
+        setting: sum(row.get("evaluation_setting") == setting for row in significant)
+        for setting in STATISTICAL_SIGNIFICANT_COUNTS
+    }
+    if comparison_counts != STATISTICAL_COMPARISON_COUNTS:
+        failures.append(f"incorrect statistical comparison counts: {comparison_counts}")
+    if verify_manuscript and significant_counts != STATISTICAL_SIGNIFICANT_COUNTS:
+        failures.append(f"incorrect significant-comparison counts: {significant_counts}")
+    expected_significant = [
+        row for row in comparisons if row.get("significant_holm_0_05") == "True"
+    ]
+    if significant != expected_significant:
+        failures.append("significant_comparisons.csv is not the exact significant subset")
+    if verify_manuscript and any(
+        row.get("direction") == "baseline_higher" for row in significant
+    ):
+        failures.append("a baseline is recorded as significantly higher than SingLEM")
+
+    for row in inventory:
+        relative = Path(row.get("input_file", ""))
+        if relative.is_absolute() or ".." in relative.parts:
+            failures.append(f"non-portable statistical input path: {relative}")
+            continue
+        source = result_root / relative
+        if not source.is_file():
+            failures.append(f"missing statistical input: {source}")
+        elif sha256(source) != row.get("sha256"):
+            failures.append(f"statistical input hash mismatch: {source}")
+
+    config = read_json(statistics_root / "analysis_config.json")
+    if contains_absolute_path(config):
+        failures.append("absolute path in statistical analysis_config.json")
+    if config.get("script") != "analysis/statistical_significance.py":
+        failures.append("incorrect statistical script path in analysis_config.json")
+    if script.is_file() and config.get("script_sha256") != sha256(script):
+        failures.append("statistical script hash mismatch in analysis_config.json")
+    report = read_json(statistics_root / "validation_report.json")
+    required_report_values = {
+        "status": "passed",
+        "paired_comparisons": 207,
+        "aligned_subject_rows": 5562,
+        "input_file_uses": 225,
+        "all_subject_ids_unique_and_expected_counts_met": True,
+        "all_subject_sets_exactly_aligned": True,
+        "all_arrays_built_from_explicitly_sorted_subject_ids": True,
+        "observation_unit_is_one_held_out_subject_accuracy": True,
+        "all_adapted_calibration_and_test_trial_ids_identical": True,
+        "holm_independently_cross_checked": True,
+    }
+    if verify_manuscript:
+        required_report_values.update(
+            manuscript_verification_requested=True,
+            all_published_accuracy_means_reproduced=True,
+            strict_svm_57_comparison_regression_unchanged=True,
+        )
+    for key, expected in required_report_values.items():
+        if report.get(key) != expected:
+            failures.append(
+                f"invalid statistical validation report value: {key}={report.get(key)!r}"
+            )
+    return failures
+
+
 def validate_reference_results(
     package_root: Path, reference_root: Path
 ) -> list[str]:
@@ -376,6 +501,31 @@ def validate_reference_results(
         failures.append(f"missing reference calibration manifest: {current_manifest}")
     elif reference_manifest.exists() and read_json(current_manifest) != read_json(reference_manifest):
         failures.append(f"calibration manifest differs from reference: {current_manifest}")
+    stable_statistics = [
+        "aligned_subject_accuracies.csv",
+        "dataset_summary.csv",
+        "input_inventory.csv",
+        "p_value_report.md",
+        "paired_comparisons.csv",
+        "significant_comparisons.csv",
+    ]
+    for filename in stable_statistics:
+        current = result_root / "statistical_significance" / filename
+        reference = reference_results / "statistical_significance" / filename
+        if not reference.exists():
+            failures.append(f"missing reference statistical result: {reference}")
+        elif not current.exists():
+            failures.append(f"missing public statistical result: {current}")
+        elif current.suffix == ".csv":
+            if read_csv(current) != read_csv(reference):
+                failures.append(f"statistical result differs from reference: {current}")
+        elif current.suffix == ".md":
+            current_text = current.read_text(encoding="utf-8").rstrip()
+            reference_text = reference.read_text(encoding="utf-8").rstrip()
+            if current_text != reference_text:
+                failures.append(f"statistical result differs from reference: {current}")
+        elif sha256(current) != sha256(reference):
+            failures.append(f"statistical result differs from reference: {current}")
     return failures
 
 
@@ -452,6 +602,12 @@ def main() -> None:
         validate_foundation_artifacts(package_root, args.raw_package)
     )
     failures.extend(validate_results(package_root))
+    failures.extend(
+        validate_statistical_results(
+            package_root,
+            verify_manuscript=args.raw_package or args.reference_root is not None,
+        )
+    )
     if args.reference_root:
         failures.extend(
             validate_reference_results(package_root, args.reference_root.resolve())
